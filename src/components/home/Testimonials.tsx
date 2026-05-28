@@ -54,12 +54,19 @@ export default function Testimonials() {
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center">
         
-        <SectionHeading
-          subtitle="Dermal Testimonials"
-          title="Loved by Sensitive Skin Profiles"
-          description="Read real botanical outcomes from vetted clinicians, minimalists, and skin health specialists worldwide."
-          dark
-        />
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-50px' }}
+          transition={{ duration: 0.6 }}
+        >
+          <SectionHeading
+            subtitle="Dermal Testimonials"
+            title="Loved by Sensitive Skin Profiles"
+            description="Read real botanical outcomes from vetted clinicians, minimalists, and skin health specialists worldwide."
+            dark
+          />
+        </motion.div>
 
         {/* Carousel Frame Wrapper */}
         <div className="relative w-full overflow-hidden min-h-[380px] sm:min-h-[320px] flex items-center justify-center p-2">
@@ -119,7 +126,13 @@ export default function Testimonials() {
         </div>
 
         {/* Controller Indicators */}
-        <div className="flex items-center gap-6 mt-10">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-50px' }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="flex items-center gap-6 mt-10"
+        >
           <button
             onClick={handlePrev}
             className="w-10 h-10 rounded-full border border-stone-800 bg-[#FAF8F5]/5 text-white hover:bg-brand-500 hover:border-brand-500 flex items-center justify-center cursor-pointer transition-all focus:outline-none"
@@ -153,7 +166,7 @@ export default function Testimonials() {
           >
             <ChevronRight className="w-5 h-5" />
           </button>
-        </div>
+        </motion.div>
 
       </div>
     </section>

@@ -79,12 +79,11 @@ export default function Header({
               onClick={() => handleNavClick('home')}
               className="text-left group cursor-pointer focus:outline-none bg-transparent border-none p-0"
             >
-              <h1 className="font-serif text-2xl sm:text-3xl font-medium tracking-[0.16em] text-[#221F1D] group-hover:text-brand-500 transition-colors duration-300">
-                SÔL<span className="text-brand-500">.</span>
-              </h1>
-              <p className="hidden sm:block text-[8px] uppercase tracking-[0.34em] text-stone-500 group-hover:text-stone-800 transition-colors duration-300 font-medium">
-                BOTANICALS
-              </p>
+              <img 
+                src="/images/brand/logo.jpeg" 
+                alt="SOL Botanicals" 
+                className="h-12 sm:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              />
             </button>
 
             {/* Desktop Navigation Link Menu */}

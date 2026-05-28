@@ -36,12 +36,11 @@ export default function Footer({ onChangePage }: FooterProps) {
           {/* Column 1: Brand Info */}
           <div className="flex flex-col gap-5">
             <div>
-              <span className="font-serif text-2xl tracking-[0.16em] font-medium text-white">
-                SÔL<span className="text-brand-500">.</span>
-              </span>
-              <p className="text-[9px] uppercase tracking-[0.38em] text-stone-400 font-semibold mt-1">
-                BOTANICALS
-              </p>
+              <img 
+                src="/images/brand/white-logo.jpeg" 
+                alt="SOL Botanicals" 
+                className="h-10 sm:h-12 w-auto object-contain"
+              />
             </div>
             
             <p className="text-sm text-stone-400 font-light leading-relaxed">

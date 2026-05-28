@@ -38,10 +38,22 @@ export default function BrandInfo() {
           {/* Left Grid Content: Image story */}
           <div className="relative">
             {/* Ambient orange fluid aura behind image */}
-            <div className="absolute -inset-4 bg-brand-100/40 rounded-3xl blur-2xl filter opacity-70" />
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 0.7, scale: 1 }}
+              viewport={{ once: true, margin: '-50px' }}
+              transition={{ duration: 0.8 }}
+              className="absolute -inset-4 bg-brand-100/40 rounded-3xl blur-2xl filter" 
+            />
             
             {/* Clean luxury cosmetics visual */}
-            <div className="relative overflow-hidden rounded-3xl aspect-[4/5] border border-stone-200 shadow-premium-lg">
+            <motion.div 
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: '-50px' }}
+              transition={{ duration: 0.6 }}
+              className="relative overflow-hidden rounded-3xl aspect-[4/5] border border-stone-200 shadow-premium-lg"
+            >
               <img
                 src="https://images.unsplash.com/photo-1617897903246-719242758050?q=80&w=800&auto=format&fit=crop"
                 alt="Organic orange essential oil drops falling onto amber dispenser"
@@ -57,11 +69,17 @@ export default function BrandInfo() {
                 </p>
                 <span className="block text-[11px] text-stone-500 font-light mt-3">— Dr. Aurelia Vance, Chief of Botanical Engineering</span>
               </div>
-            </div>
+            </motion.div>
           </div>
 
           {/* Right Grid Content: Features List */}
-          <div className="flex flex-col items-start text-left">
+          <motion.div 
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: '-50px' }}
+            transition={{ duration: 0.6 }}
+            className="flex flex-col items-start text-left"
+          >
             <span className="text-xs uppercase tracking-[0.25em] font-semibold text-brand-500 mb-3">Our Manifestos</span>
             <h2 className="font-serif text-3xl sm:text-4xl font-medium tracking-tight text-[#221F1D] mb-6 leading-tight">
               Biomimetic Dermal Care <br />Without Compromise.
@@ -95,7 +113,7 @@ export default function BrandInfo() {
               ))}
             </div>
 
-          </div>
+          </motion.div>
 
         </div>
       </div>

@@ -26,7 +26,7 @@ export const products: Product[] = [
       'Decyl Glucoside (Coconut-derived Eco-Purifier)'
     ],
     usage: 'Dispense 1-2 pumps onto damp hands. Gently massage onto face in circular motions for 60 seconds, allowing botanical AHAs to activate. Rinse thoroughly with lukewarm water. Use morning and night.',
-    image: 'https://images.unsplash.com/photo-1608248597481-496100c8c836?q=80&w=800&auto=format&fit=crop',
+    image: '/images/brand/fash-wash.jpeg',
     secondaryImages: [
       'https://images.unsplash.com/photo-1608248597481-496100c8c836?q=80&w=800&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=800&auto=format&fit=crop',
@@ -88,7 +88,7 @@ export const products: Product[] = [
       'Sweet Orange Peel Oil (Citrus Sinensis)'
     ],
     usage: 'Lather a generous amount over wet body using hands or a soft bath brush. Breathe in the exquisite aromatics of neroli blossom and warm orange. Rinse meticulously.',
-    image: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=800&auto=format&fit=crop',
+    image: '/images/brand/body-wash.jpeg',
     secondaryImages: [
       'https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=800&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1617897903246-719242758050?q=80&w=800&auto=format&fit=crop',
@@ -143,7 +143,7 @@ export const products: Product[] = [
       'Simmondsia Chinensis (Jojoba Seed) Oil'
     ],
     usage: 'Apply directly onto dry or slightly damp body. Circular massage to cover all areas—witness the velvety oil melting. Drop warm water and massage as it turns into a luxury milk, then rinse.',
-    image: 'https://images.unsplash.com/photo-1526947425960-945c6e72858f?q=80&w=800&auto=format&fit=crop',
+    image: '/images/brand/sceencare.jpeg',
     secondaryImages: [
       'https://images.unsplash.com/photo-1526947425960-945c6e72858f?q=80&w=800&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=800&auto=format&fit=crop',
@@ -189,7 +189,7 @@ export const products: Product[] = [
       'Citrus Sinensis (Wild Orange) Peel Oil'
     ],
     usage: 'Dispense a nickel-sized portion. Apply gently onto clean, damp skin of the face, avoiding the immediate eye contours. Breathe in, massage in soft spirals using light pressure for 1-2 minutes. Wash off completely.',
-    image: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=800&auto=format&fit=crop',
+    image: '/images/brand/moisturizing-cream.jpeg',
     secondaryImages: [
       'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=800&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=800&auto=format&fit=crop'
@@ -233,7 +233,7 @@ export const products: Product[] = [
       'Centella Asiatica (Cica) Leaf Extract'
     ],
     usage: 'Dampen hands. Rub 1 pump to create a gentle, transparent lather. Apply onto face, drawing target circles on your T-zone. Leave on 30 seconds for AHAs to activate. Rinse with cool water.',
-    image: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=800&auto=format&fit=crop',
+    image: '/images/brand/face-serm.jpeg',
     secondaryImages: [
       'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=800&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1608248597481-496100c8c836?q=80&w=800&auto=format&fit=crop'
@@ -278,7 +278,7 @@ export const products: Product[] = [
       'Jasmine Absolute essential oil'
     ],
     usage: 'Pour into wet hands or a warm flannel sponge. Cover the entire body from neck to toes, enjoying the luxurious, milky cream formulation. Rinse with warm water.',
-    image: 'https://images.unsplash.com/photo-1617897903246-719242758050?q=80&w=800&auto=format&fit=crop',
+    image: '/images/brand/body-wash.jpeg',
     secondaryImages: [
       'https://images.unsplash.com/photo-1617897903246-719242758050?q=80&w=800&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=800&auto=format&fit=crop'
@@ -323,7 +323,7 @@ export const products: Product[] = [
       'Decyl Glucoside'
     ],
     usage: 'Rub a pea-sized drop in palms to bubble up. Apply gently for a quick and fresh foaming cleanse. Rinse with room temperature water.',
-    image: 'https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?q=80&w=800&auto=format&fit=crop',
+    image: '/images/brand/fash-wash.jpeg',
     secondaryImages: [
       'https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?q=80&w=800&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=800&auto=format&fit=crop'
@@ -365,7 +365,7 @@ export const products: Product[] = [
       '100% Organic, Undyed Wild Linen Washcloth'
     ],
     usage: 'See individual bottles included inside for step-by-step skincare rituals. Ideal to begin face wash daily, then move onto neroli blossom shower milk to encapsulate the full aromatherapy experience.',
-    image: 'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=800&auto=format&fit=crop',
+    image: '/images/brand/sceencare.jpeg',
     secondaryImages: [
       'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=800&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=800&auto=format&fit=crop',

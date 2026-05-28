@@ -38,11 +38,18 @@ export default function ProductShowcase({
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center">
         
-        <SectionHeading
-          subtitle="Botanical Catalog"
-          title="Curated Dermal Solutions"
-          description="Each recipe is tailored to answer specific skin barriers. Filter below to discover your recommended biological cleanser."
-        />
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-50px' }}
+          transition={{ duration: 0.6 }}
+        >
+          <SectionHeading
+            subtitle="Botanical Catalog"
+            title="Curated Dermal Solutions"
+            description="Each recipe is tailored to answer specific skin barriers. Filter below to discover your recommended biological cleanser."
+          />
+        </motion.div>
 
         {/* Categories Tab Pill Selector */}
         <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-4 mb-12 sm:mb-16">

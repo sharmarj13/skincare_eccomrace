@@ -29,20 +29,44 @@ export default function Newsletter() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         
         {/* Floating star */}
-        <div className="inline-flex p-3 rounded-full bg-white border border-stone-200/50 shadow-sm text-brand-500 mb-6">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.5 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="inline-flex p-3 rounded-full bg-white border border-stone-200/50 shadow-sm text-brand-500 mb-6"
+        >
           <Star className="w-5 h-5 fill-current text-brand-500 animate-pulse" />
-        </div>
+        </motion.div>
 
-        <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-[#221F1D] leading-tight max-w-2xl mx-auto">
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="font-serif text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-[#221F1D] leading-tight max-w-2xl mx-auto"
+        >
           Join the SÔL Circle<span className="text-brand-500">.</span>
-        </h2>
+        </motion.h2>
         
-        <p className="text-stone-600 font-light text-base sm:text-lg max-w-xl mx-auto mt-4 leading-relaxed">
+        <motion.p 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-stone-600 font-light text-base sm:text-lg max-w-xl mx-auto mt-4 leading-relaxed"
+        >
           Receive a complimentary travel-size daily cleanser with your first order, alongside private wellness rituals and priority access to limited seasonal botanical drops.
-        </p>
+        </motion.p>
 
         {/* Subscription box container */}
-        <div className="max-w-md mx-auto mt-10">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="max-w-md mx-auto mt-10"
+        >
           <AnimatePresence mode="wait">
             {!isSubmitted ? (
               <motion.form
@@ -103,7 +127,7 @@ export default function Newsletter() {
               {error}
             </p>
           )}
-        </div>
+        </motion.div>
 
         {/* Brand guarantee notice */}
         <p className="text-[10px] text-stone-400 mt-6 tracking-wide">
