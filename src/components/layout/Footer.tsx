@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Instagram, Sparkles, AlertCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Instagram, Facebook, Sparkles, AlertCircle } from 'lucide-react';
 
 interface FooterProps {
   onChangePage: (page: string) => void;
@@ -10,22 +10,18 @@ export default function Footer({ onChangePage }: FooterProps) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const shopLinks = [
-    { label: 'Face Cleansers', id: 'products', filter: 'face' },
-    { label: 'Body Restores', id: 'products', filter: 'body' },
-    { label: 'Cleansing Ritual Sets', id: 'products', filter: 'set' },
-  ];
-
-  const brandLinks = [
-    { label: 'About Our Aligned Story', id: 'about' },
-    { label: 'Botanical Skincare FAQ', id: 'faq' },
-    { label: 'Connect With SÔL Lab', id: 'contact' },
+  const menuLinks = [
+    { label: 'Home', id: 'home' },
+    { label: 'About us', id: 'about' },
+    { label: 'Product', id: 'products' },
+    { label: 'Contact Us', id: 'contact' },
+    { label: 'Skincare Faq', id: 'faq' },
   ];
 
   const policyLinks = [
-    { label: 'Privacy Regulations', id: 'privacy-policy' },
-    { label: 'Terms & Conditions', id: 'terms-condition' },
-    { label: 'Luminous Returns', id: 'return-policy' },
+    { label: 'Privacy Policy', id: 'privacy-policy' },
+    { label: 'Terms and Conditions', id: 'terms-condition' },
+    { label: 'Refund Policy', id: 'return-policy' },
   ];
 
   return (
@@ -48,28 +44,41 @@ export default function Footer({ onChangePage }: FooterProps) {
             </p>
 
             <div className="flex items-center gap-4 mt-2">
-              <button
+              <a
+                href="https://www.facebook.com/share/18pzjkTedz/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full bg-[#1C1917] border border-stone-800 flex items-center justify-center hover:bg-brand-500 hover:text-white transition-all cursor-pointer"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-4 h-4" />
+              </a>
+              <a
+                href="https://www.instagram.com/boonavacare?igsh=MTN5d3d3cjlta3Nibw=="
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-[#1C1917] border border-stone-800 flex items-center justify-center hover:bg-brand-500 hover:text-white transition-all cursor-pointer"
                 aria-label="Instagram"
               >
                 <Instagram className="w-4 h-4" />
-              </button>
-              <button
+              </a>
+              <a
+                href="mailto:boonavacare@gmail.com"
                 className="w-9 h-9 rounded-full bg-[#1C1917] border border-stone-800 flex items-center justify-center hover:bg-brand-500 hover:text-white transition-all cursor-pointer"
-                aria-label="E-Mail Circular"
+                aria-label="E-Mail"
               >
                 <Mail className="w-4 h-4" />
-              </button>
+              </a>
             </div>
           </div>
 
-          {/* Column 2: Quick Shop Links */}
+          {/* Column 2: Main Menu */}
           <div>
             <h3 className="text-xs uppercase tracking-[0.25em] font-semibold text-brand-300 mb-6">
-              Shop Botanics
+              Menu
             </h3>
             <ul className="flex flex-col gap-3.5">
-              {shopLinks.map((link, idx) => (
+              {menuLinks.map((link, idx) => (
                 <li key={idx}>
                   <button
                     onClick={() => handlePageClick(link.id)}
@@ -82,24 +91,8 @@ export default function Footer({ onChangePage }: FooterProps) {
             </ul>
           </div>
 
-          {/* Column 3: Brand & FAQs */}
-          <div>
-            <h3 className="text-xs uppercase tracking-[0.25em] font-semibold text-brand-300 mb-6">
-              Boonava Care
-            </h3>
-            <ul className="flex flex-col gap-3.5">
-              {brandLinks.map((link, idx) => (
-                <li key={idx}>
-                  <button
-                    onClick={() => handlePageClick(link.id)}
-                    className="text-sm font-light text-stone-400 hover:text-white transition-colors duration-200 cursor-pointer text-left focus:outline-none"
-                  >
-                    {link.label}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Column 3: Empty to balance grid since we combined menus */}
+          <div className="hidden lg:block"></div>
 
           {/* Column 4: Contact Lab Details */}
           <div className="flex flex-col gap-5">
@@ -111,21 +104,21 @@ export default function Footer({ onChangePage }: FooterProps) {
               <div className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-brand-400 shrink-0 mt-0.5" />
                 <span className="text-sm text-stone-400 font-light leading-relaxed">
-                  Suite 48, Citrus Botanic Pavilion, Newport Beach, CA 92660
+                  Tumkur -572104
                 </span>
               </div>
 
               <div className="flex items-start gap-3">
                 <Phone className="w-4 h-4 text-brand-400 shrink-0 mt-0.5" />
                 <span className="text-sm text-stone-400 font-light">
-                  +1 (234) 567-890
+                  +91 9024234466
                 </span>
               </div>
 
               <div className="flex items-start gap-3">
                 <Mail className="w-4 h-4 text-brand-400 shrink-0 mt-0.5" />
                 <span className="text-sm text-stone-400 font-light">
-                  hello@boonava.com
+                  boonavacare@gmail.com
                 </span>
               </div>
             </div>

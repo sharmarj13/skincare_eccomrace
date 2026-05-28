@@ -58,7 +58,7 @@ export default function PolicyView({ type }: PolicyViewProps) {
         },
         {
           heading: '2. Returns Process on Opened Containers',
-          text: 'We accept returns on bottles even if they are already opened, unsealed, or partly used. Reach out to our Bespoke Care Lab at hello@solbotanicals.com to secure a pre-paid DHL shipping label. Wrap your amber glass bottle safely and drop it at any standard shipping carrier.',
+          text: 'We accept returns on bottles even if they are already opened, unsealed, or partly used. Reach out to our Bespoke Care Lab at boonavacare@gmail.com to secure a pre-paid DHL shipping label. Wrap your amber glass bottle safely and drop it at any standard shipping carrier.',
         },
         {
           heading: '3. Refund Issuance Duration',

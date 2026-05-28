@@ -63,8 +63,7 @@ export default function ProductsView({
   const categories = [
     { id: 'all', label: 'All Catalog' },
     { id: 'face', label: 'Face Cleansers' },
-    { id: 'body', label: 'Body Restores' },
-    { id: 'set', label: 'Ritual Sets' },
+    { id: 'body', label: 'Body Restores' }
   ];
 
   const handleClearFilters = () => {

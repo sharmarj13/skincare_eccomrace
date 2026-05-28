@@ -5,23 +5,23 @@ export default function BrandInfo() {
   const values = [
     {
       icon: <Leaf className="w-6 h-6 text-brand-600" />,
-      title: '100% Biocompatible Extracts',
-      description: 'Slow-crafted from high-purity blood orange rind water and cold-pressed neroli petals. Zero synthetics, petroleum derivatives, or colorants.'
-    },
-    {
-      icon: <Award className="w-6 h-6 text-brand-600" />,
-      title: 'Dermatologist Safe',
-      description: 'Dermatologically audited and proven hypoallergenic. Perfectly safe skin food for hyper-sensitive conditions.'
-    },
-    {
-      icon: <ShieldCheck className="w-6 h-6 text-brand-600" />,
-      title: 'Mantle Harmony (pH 5.5)',
-      description: 'Formulated to align exactly with your acid mantle pH parameters. Your moisture envelope remains perfectly resilient.'
+      title: 'Vitamin C Brightening',
+      description: 'Our Vitamin C Face Wash and Serum use stable antioxidants to fade dark spots and give you a flawless, natural glow.'
     },
     {
       icon: <Sun className="w-6 h-6 text-brand-600" />,
-      title: 'Eco-Ethical Harvesting',
-      description: 'Sustainable hand-harvested ingredients in the Mediterranean basin. Bottles are 100% PCR recyclable amber glass.'
+      title: 'Maximum Sun Protection',
+      description: 'Sunscreen Spf50 PA++++ guarantees broad-spectrum defense against UVA/UVB rays without leaving a white cast or sticky residue.'
+    },
+    {
+      icon: <ShieldCheck className="w-6 h-6 text-brand-600" />,
+      title: 'Deep Hydration Repair',
+      description: 'The Moisturizer Cream locks in intense moisture for 24 hours, actively repairing your skin barrier and preventing flakiness.'
+    },
+    {
+      icon: <Award className="w-6 h-6 text-brand-600" />,
+      title: 'Zesty Body Refresh',
+      description: 'Our Lemon Body Wash uses natural citrus extracts to cleanse deeply, waking up your senses while keeping skin soft.'
     }
   ];
 
@@ -72,10 +72,10 @@ export default function BrandInfo() {
           >
             <span className="text-xs uppercase tracking-[0.25em] font-semibold text-brand-500 mb-3">Our Manifestos</span>
             <h2 className="font-serif text-3xl sm:text-4xl font-medium tracking-tight text-[#221F1D] mb-6 leading-tight">
-              Biomimetic Dermal Care <br />Without Compromise.
+              A Complete Routine <br />For Flawless Skin.
             </h2>
             <p className="text-stone-600 font-light text-base leading-relaxed mb-10 max-w-xl">
-              Our lab believes in cosmetic transparency. Every single drop serves a health purpose for your skin cells. Here is our gold standard commitment to you:
+              We believe skincare should be simple, effective, and deeply nourishing. Our 5-step daily routine covers every base—from intense brightening and hydration to maximum sun protection. Here is what we deliver:
             </p>
 
             {/* Grid layout of value cards */}

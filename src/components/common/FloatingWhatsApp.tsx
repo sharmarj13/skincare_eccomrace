@@ -5,7 +5,7 @@ export default function FloatingWhatsApp() {
   const handleOpenWhatsApp = () => {
     // Elegant luxury skincare message
     const message = encodeURIComponent("Hello SÔL Botanicals! I would love to get a premium skincare consultation or ask about your Face & Body washes.");
-    window.open(`https://wa.me/1234567890?text=${message}`, '_blank');
+    window.open(`https://wa.me/9024234466?text=${message}`, '_blank');
   };
 
   return (

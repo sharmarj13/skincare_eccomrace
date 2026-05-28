@@ -5,27 +5,27 @@ import { Sparkles, Compass, ShieldAlert, Users, Flower, Feather } from 'lucide-r
 
 export default function AboutView() {
   const stats = [
-    { number: '100%', label: 'Active Botanicals', desc: 'No cheap fillers, water bases are blended with real organic hydrosols.' },
-    { number: '0%', label: 'Sulfates & Toxins', desc: 'Completely free from parabens, synthetic colors, sulfates, or chemical fragrances.' },
-    { number: '30-Day', label: 'Guarantee', desc: 'We promise complete skin happiness. Love your cleanser or return it easily.' },
-    { number: '50K+', label: 'Delivered Glows', desc: 'Restoring confidence and skin health to over 50,000 customers globally.' }
+    { number: '100%', label: 'Active Ingredients', desc: 'No cheap fillers. We use potent, stable Vitamin C and deep hydrators.' },
+    { number: 'SPF50', label: 'Maximum Protection', desc: 'Broad-spectrum UVA/UVB defense without any sticky white cast.' },
+    { number: '24-Hr', label: 'Deep Hydration', desc: 'Our Moisturizer Cream locks in moisture for a full 24 hours of plumpness.' },
+    { number: '50K+', label: 'Glowing Customers', desc: 'Restoring confidence and radiant skin to over 50,000 customers globally.' }
   ];
 
   const values = [
     {
       icon: <Flower className="w-5 h-5 text-brand-600" />,
-      title: 'Preserves the Dermal Barrier',
-      text: 'Skin stripped by harsh soap triggers severe aging and oily rebounds. SÔL protects your natural lipid cushion.'
+      title: 'Brighten & Revitalize',
+      text: 'Our Vit C Face Wash and Face Serum combination clears away dullness and rapidly fades dark spots.'
     },
     {
-      icon: <Feather className="w-5 h-5 text-brand-600" />,
-      title: 'Sustainably Harvested',
-      text: 'Our active Vitamin C blood orange extracts are gathered from family-owned biodynamic orchards.'
+      icon: <ShieldAlert className="w-5 h-5 text-brand-600" />,
+      title: 'Defend & Protect',
+      text: 'Our Sunscreen Spf50 PA++++ acts as an invisible shield against tanning, sunburn, and premature aging.'
     },
     {
       icon: <Compass className="w-5 h-5 text-brand-600" />,
-      title: 'Aroma-therapeutic Solace',
-      text: 'We infuse genuine absolute Neroli essential oils to relieve cortisol during your washing rituals.'
+      title: 'Hydrate & Refresh',
+      text: 'Experience 24-hour hydration with our Moisturizer Cream, and wake up your senses with the Lemon Body Wash.'
     }
   ];
 
@@ -45,22 +45,22 @@ export default function AboutView() {
           
           <div className="text-left">
             <span className="text-xs uppercase tracking-[0.25em] font-semibold text-brand-500 mb-3 block">
-              Slow Skincare Movement
+              The Complete Daily Routine
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl font-medium tracking-tight text-[#221F1D] leading-tight mb-6">
-              Born from a search for soap that honors the skin.
+              Born from a search for a simple, highly effective skincare routine.
             </h2>
             
             <p className="text-[#221F1D] font-light text-base leading-relaxed mb-4">
-              Our journey began in 2022 inside a warm citrus orchard in Southern California. Standard body washes, stacked with aggressive laurel sulfates and synthetic fake aromas, left our skin tight, dry, and flared with persistent micro-irritations.
+              Our journey began when we realized that achieving glowing, flawless skin shouldn't require a complicated 10-step process or incredibly expensive treatments. Most people just need high-quality basics that actually work.
             </p>
             
             <p className="text-stone-500 font-light text-sm leading-relaxed mb-6">
-              We realized the cosmetic sector was obsessed with massive chemical bubbles instead of skin health. We decided to strip away the foam noise. We combined premium high-purity Sweet Orange skin compounds, cold-extracted Mediterranean Neroli blossom water, and nourishing vegetable lipids to introduce pH-aligned botanical craft washes.
+              We decided to cut through the noise and create the ultimate everyday lineup. We formulated a powerful Vit C Face Wash and Serum for brightening, a 24-hour Moisturizer Cream for deep hydration, an invisible Sunscreen SPF 50 for absolute protection, and a refreshing Lemon Body Wash. It's everything you need for healthy, radiant skin.
             </p>
 
             <blockquote className="border-l-2 border-brand-500 pl-6 my-6 italic text-stone-850 text-sm font-medium">
-              "We slow-craft each batch. It takes thrice as long as commercial soaps, but preserving the fragile bio-actives of Citrus fruit is worth every single drop."
+              "We focus on exactly what your skin needs: Brightening Vitamin C, intense 24-hour hydration, and maximum SPF 50 sun protection. Simple, clean, and highly effective."
             </blockquote>
           </div>
 

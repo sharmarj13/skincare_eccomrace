@@ -11,38 +11,38 @@ export interface Testimonial {
 export const testimonials: Testimonial[] = [
   {
     id: 'test-01',
-    name: 'Eleanor Carlyle',
-    role: 'Aesthetician & Wellness Writer',
+    name: 'Priya Sharma',
+    role: 'Makeup Artist & Beauty Blogger',
     avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop',
     rating: 5,
-    quote: 'As an aesthetician, I look closely at lipid barrier integrity. The Neroli Blossom wash cleanses beautifully without ever causing dry irritation. The scent of blood orange orange flowers is mesmerizing.',
-    skinType: 'Dry & Sensitive skin'
+    quote: 'The Vit C Face Serum has been an absolute game-changer for my clients! It fades dark spots so beautifully and leaves a glowing, glass-skin finish before I even apply makeup. Highly recommend it!',
+    skinType: 'Pigmentation / Dull Skin'
   },
   {
     id: 'test-02',
-    name: 'Siddharth Mehta',
-    role: 'Tech Founder & Skincare Minimalist',
+    name: 'Rohan Gupta',
+    role: 'Fitness Trainer',
     avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop',
     rating: 5,
-    quote: 'The Sweet Orange AHA Gel Cleanser handles my combination T-zone shine oil instantly but leaves my skin soft. The amber pump glass looks incredible sitting in my minimalist bathroom.',
-    skinType: 'Combination / Oily skin'
+    quote: 'After a heavy workout, nothing beats the Lemon Body Wash. It smells so fresh, wakes me up instantly, and doesn\'t leave my skin dry like commercial soaps do. I buy this on repeat.',
+    skinType: 'Normal / Sweat-prone skin'
   },
   {
     id: 'test-03',
-    name: 'Margaux Dufour',
-    role: 'Luxury Travel Consultant',
+    name: 'Aisha Desai',
+    role: 'Corporate Executive',
     avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop',
     rating: 5,
-    quote: 'Whenever I return from 12-hour long-haul flights, the Nectar Radiance Oil-To-Milk Wash is my instant hydration survival kit. It resets dry skin into sheer velvet in seconds.',
-    skinType: 'Profoundly Dehydrated skin'
+    quote: 'Working 10-hour days in an AC office ruined my skin until I found the Moisturizer Cream. It deeply hydrates for a full 24 hours without feeling heavy. My skin finally feels plump and healthy again.',
+    skinType: 'Dry & Dehydrated skin'
   },
   {
     id: 'test-04',
-    name: 'Chloe Sinclair',
-    role: 'Yoga Instructor',
+    name: 'Neha Kapoor',
+    role: 'Travel Photographer',
     avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=200&auto=format&fit=crop',
     rating: 5,
-    quote: 'My hot yoga sessions used to trigger red, raw skin irritation. The Blood Orange Daily Balance wash completely pacified the flushing. It is simple, gentle, and utterly clean.',
-    skinType: 'Redness & Reactive skin'
+    quote: 'I spend hours in the sun every day. This Sunscreen Spf50 PA++++ is a lifesaver! Zero white cast, blends like a dream, and it actually protects my face from tanning. Better than expensive international brands.',
+    skinType: 'Sun-Exposed / Sensitive skin'
   }
 ];

@@ -34,7 +34,7 @@ export default function HeroSection({ onShopClick, onAboutClick }: HeroSectionPr
         >
           <Sparkles className="w-4 h-4 text-brand-300 animate-spin" />
           <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-white">
-            Introducing Face & Body Oils
+            Your Complete Glowing Skin Routine
           </span>
         </motion.div>
 
@@ -45,9 +45,9 @@ export default function HeroSection({ onShopClick, onAboutClick }: HeroSectionPr
           transition={{ duration: 0.7, delay: 0.15 }}
           className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium tracking-tight leading-tight text-white drop-shadow-md"
         >
-          Pure Citrus <br className="hidden sm:block" />
-          <span className="text-brand-300 font-normal italic pr-2">Restorative</span>
-          Washes.
+          Unlock Your <br className="hidden sm:block" />
+          <span className="text-brand-300 font-normal italic pr-2">Natural</span>
+          Glow.
         </motion.h1>
 
         {/* Subtext description */}
@@ -57,7 +57,7 @@ export default function HeroSection({ onShopClick, onAboutClick }: HeroSectionPr
           transition={{ duration: 0.7, delay: 0.3 }}
           className="mt-6 sm:mt-8 text-white/90 text-base sm:text-lg lg:text-xl font-light leading-relaxed max-w-2xl drop-shadow-sm"
         >
-          Every formula is slow-crafted with medical-grade Vitamin C extract from blood orange citrus and distilled neroli blossom. Elevate your cleansing routine into a pure calming ritual.
+          Discover the perfect daily skincare routine. From our brightening Vitamin C Face Serum to our broad-spectrum Sunscreen SPF 50, every product is formulated to give you flawless, healthy skin.
         </motion.p>
 
         {/* Actions Button Panel */}
@@ -71,7 +71,7 @@ export default function HeroSection({ onShopClick, onAboutClick }: HeroSectionPr
             onClick={onShopClick}
             className="group w-full sm:w-auto flex items-center justify-center gap-2 bg-brand-500 hover:bg-brand-600 text-white px-8 py-4 rounded-full font-semibold uppercase tracking-widest text-xs transition-colors shadow-lg focus:outline-none"
           >
-            Shop Cleansers
+            Shop The Routine
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </button>
 

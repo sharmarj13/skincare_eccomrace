@@ -101,7 +101,7 @@ export default function FAQView() {
           </div>
 
           <a
-            href="mailto:help@solbotanicals.com"
+            href="mailto:boonavacare@gmail.com"
             className="shrink-0 px-6 py-3 bg-[#1C1917] text-white hover:bg-black text-[10px] font-bold uppercase tracking-widest rounded-full transition-all shadow-sm"
           >
             Ask a Chemist

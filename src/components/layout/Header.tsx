@@ -33,10 +33,10 @@ export default function Header({
 
   const navItems = [
     { id: 'home', label: 'Home' },
-    { id: 'products', label: 'Shop Cleansers' },
-    { id: 'about', label: 'Our Story' },
-    { id: 'faq', label: 'Skincare FAQs' },
+    { id: 'about', label: 'About us' },
+    { id: 'products', label: 'Product' },
     { id: 'contact', label: 'Contact Us' },
+    { id: 'faq', label: 'Skincare Faq' },
   ];
 
   const handleNavClick = (pageId: string) => {
@@ -188,8 +188,8 @@ export default function Header({
                   Pure Citrus-Fused Restorative Skin & Body Soap Rituals. Hand-filled in amber glass containers.
                 </p>
                 <div className="mt-4 flex flex-col gap-1 text-[11px] font-medium tracking-wide text-stone-700">
-                  <span>Inquiries: hello@boonava.com</span>
-                  <span>WhatsApp: +1 (234) 567-890</span>
+                  <span>Inquiries: boonavacare@gmail.com</span>
+                  <span>WhatsApp: +91 9024234466</span>
                 </div>
               </div>
             </motion.div>

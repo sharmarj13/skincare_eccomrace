@@ -30,7 +30,10 @@ import Loader from './components/common/Loader';
 import OfferModal from './components/home/OfferModal';
 
 export default function App() {
-  const [activePage, setActivePage] = useState<string>('home');
+  const [activePage, setActivePage] = useState<string>(() => {
+    const path = window.location.pathname;
+    return path === '/' || path === '' ? 'home' : path.substring(1);
+  });
   const [cart, setCart] = useState<CartItem[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isInitialLoading, setIsInitialLoading] = useState(true);
@@ -57,34 +60,42 @@ export default function App() {
       setIsOfferModalOpen(true);
     }, 12000);
 
+    // Listen for browser back/forward navigation
+    const handlePopState = () => {
+      const path = window.location.pathname;
+      setActivePage(path === '/' || path === '' ? 'home' : path.substring(1));
+    };
+    window.addEventListener('popstate', handlePopState);
+
     return () => {
       clearTimeout(timer);
       clearTimeout(offerTimer);
+      window.removeEventListener('popstate', handlePopState);
     };
   }, []);
 
   // SEO Dynamic Meta Tags
   useEffect(() => {
-    let title = 'Boonava Skin Care Product | Premium Organic Beauty';
-    let metaDescription = 'Buy the best Boonava Skin Care Product online. Discover our premium organic skincare, natural anti-aging face washes, and hydrating body oils. 100% glowing skin guaranteed.';
+    let title = 'Boonava Care | Glowing Skin & Vitamin C Face Wash';
+    let metaDescription = 'Buy the best Boonava Care skincare products. Discover our premium Vitamin C Face Wash, Anti-Aging Serum, Sunscreen SPF50, and Hydrating Moisturizer for glowing skin.';
 
     if (activePage === 'products') {
-      title = 'Shop Premium Skincare Products | Boonava';
-      metaDescription = 'Explore Boonava Skin Care Products. Natural, premium face and body care products designed for anti-aging, acne-free, and glowing skin. Shop now for best results.';
+      title = 'Shop Best Skincare Routine | Boonava Care';
+      metaDescription = 'Explore Boonava Care\'s complete daily routine. Shop Vitamin C Face Serum, Sunscreen SPF 50, and Lemon Body Wash designed for glowing, healthy skin.';
     } else if (activePage.startsWith('product/')) {
       const slug = activePage.split('/')[1];
       const product = products.find(p => p.slug === slug);
       if (product) {
-        title = `${product.name} | Boonava Skin Care`;
+        title = `${product.name} | Buy Online | Boonava Care`;
         metaDescription = product.description;
       }
     } else if (activePage === 'about') {
-      title = 'Our Formulation & Story | Boonava Skin Care';
-      metaDescription = 'Learn about Boonava Skin Care Product formulation. We use cold-pressed natural ingredients for organic, luxurious skincare routines that promote healthy, glowing skin.';
+      title = 'Our Skincare Story | Boonava Care';
+      metaDescription = 'Learn about Boonava Care\'s simple, effective 5-step skincare routine designed to give you glowing, radiant, and healthy skin every single day.';
     } else if (activePage === 'faq') {
-      title = 'Skincare FAQs & Customer Care | Boonava';
+      title = 'Skincare FAQs & Guides | Boonava Care';
     } else if (activePage === 'contact') {
-      title = 'Contact Boonava Skin Care Product';
+      title = 'Contact Us | Boonava Care Skincare Support';
     }
 
     document.title = title;
@@ -151,6 +162,12 @@ export default function App() {
   const handlePageChange = (pageId: string) => {
     setActivePage(pageId);
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    
+    // Update browser URL history
+    const newUrl = pageId === 'home' ? '/' : `/${pageId}`;
+    if (window.location.pathname !== newUrl) {
+      window.history.pushState({}, '', newUrl);
+    }
   };
 
   const cartCount = cart.reduce((acc, item) => acc + item.quantity, 0);

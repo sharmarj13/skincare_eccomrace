@@ -65,7 +65,7 @@ export default function ContactView() {
                 <div>
                   <h3 className="text-xs uppercase tracking-widest font-bold text-stone-800 mb-1">Botanical Pavilion Location</h3>
                   <p className="text-stone-500 text-xs font-light leading-relaxed">
-                    Suite 48, Citrus Botanic Circle, Newport Beach, CA 92660
+                    Tumkur -572104
                   </p>
                 </div>
               </div>
@@ -76,8 +76,8 @@ export default function ContactView() {
                 </div>
                 <div>
                   <h3 className="text-xs uppercase tracking-widest font-bold text-stone-800 mb-1">Direct Inquiries E-Mail</h3>
-                  <a href="mailto:hello@solbotanicals.com" className="text-[#221F1D] text-xs font-semibold hover:text-brand-500 transition-colors">
-                    hello@solbotanicals.com
+                  <a href="mailto:boonavacare@gmail.com" className="text-[#221F1D] text-xs font-semibold hover:text-brand-500 transition-colors">
+                    boonavacare@gmail.com
                   </a>
                 </div>
               </div>
@@ -89,7 +89,7 @@ export default function ContactView() {
                 <div>
                   <h3 className="text-xs uppercase tracking-widest font-bold text-stone-800 mb-1">Skincare Support Line</h3>
                   <span className="text-stone-500 text-xs font-light">
-                    +1 (234) 567-890
+                    +91 9024234466
                   </span>
                 </div>
               </div>
@@ -262,7 +262,7 @@ export default function ContactView() {
             <span className="text-[10px] uppercase tracking-[0.22em] font-semibold text-[#f95f10] mb-2 font-medium">Headquarters Pavilion</span>
             <h3 className="font-serif text-lg font-medium text-[#221F1D] mb-2 leading-tight">SÔL Botanicals Critical Lab</h3>
             <p className="text-stone-500 text-xs font-light leading-relaxed">
-              48 Citrus Orchid Coast Parkway, Newport Beach, California <br />
+              Tumkur -572104 <br />
               Come by for our on-site sensory hydration bar & botanical trials.
             </p>
             <span className="block text-[10px] text-[#221F1D] font-bold uppercase tracking-widest mt-4">Tours Available Friday 2pm — 5pm</span>

@@ -29,7 +29,7 @@ export default function OfferModal({ isOpen, onClose }: OfferModalProps) {
 
   const handleWhatsApp = () => {
     const text = encodeURIComponent("Hello Boonava! I would like to claim the exclusive 'Buy 2 Get 1 Free' offer.");
-    window.open(`https://wa.me/1234567890?text=${text}`, '_blank');
+    window.open(`https://wa.me/9024234466?text=${text}`, '_blank');
     onClose();
   };
 
