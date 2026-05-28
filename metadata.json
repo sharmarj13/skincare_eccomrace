@@ -1,0 +1,8 @@
+{
+  "name": "Skincare eCommerce Store",
+  "description": "A premium, animated, and fully responsive eCommerce store for a high-end luxury Face & Body Wash brand.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
