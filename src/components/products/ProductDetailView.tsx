@@ -63,7 +63,7 @@ export default function ProductDetailView({
   const hasDiscount = product.discountPrice !== undefined && product.discountPrice < product.price;
 
   return (
-    <div className="bg-[#FAF8F5] pb-24 text-left">
+    <article className="bg-[#FAF8F5] pb-24 text-left">
       {/* Upper navigation breadcrumb action bar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex items-center justify-between border-b border-stone-200/50">
         <button
@@ -91,6 +91,8 @@ export default function ProductDetailView({
               <img
                 src={activeImage}
                 alt={product.name}
+                loading="eager"
+                decoding="async"
                 className="w-full h-full object-cover transition-transform duration-700 ease-out"
                 referrerPolicy="no-referrer"
               />
@@ -359,6 +361,6 @@ export default function ProductDetailView({
         </div>
 
       </div>
-    </div>
+    </article>
   );
 }

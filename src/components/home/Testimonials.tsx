@@ -41,7 +41,7 @@ export default function Testimonials() {
   const active = testimonials[activeIndex];
 
   return (
-    <section className="py-20 sm:py-24 bg-[#1C1917] text-white relative overflow-hidden" id="testimonials">
+    <section className="py-20 sm:py-24 bg-[#1C1917] text-white relative overflow-hidden" id="testimonials" aria-label="Customer Testimonials">
       {/* Decorative luxury absolute lights */}
       <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-brand-500/10 blur-3xl opacity-40 pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-orange-400/5 blur-3xl opacity-30 pointer-events-none" />

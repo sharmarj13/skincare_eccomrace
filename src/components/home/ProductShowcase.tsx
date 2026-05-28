@@ -8,6 +8,7 @@ interface ProductShowcaseProps {
   products: Product[];
   onAddToCart: (product: Product, quantity: number) => void;
   onClickProduct: (slug: string) => void;
+  onExploreAllClick: () => void;
 }
 
 type FilterCategory = 'all' | 'face' | 'body' | 'set';
@@ -16,6 +17,7 @@ export default function ProductShowcase({
   products,
   onAddToCart,
   onClickProduct,
+  onExploreAllClick,
 }: ProductShowcaseProps) {
   const [activeCategory, setActiveCategory] = useState<FilterCategory>('all');
 
@@ -27,18 +29,18 @@ export default function ProductShowcase({
   ];
 
   // Curate filtered list
-  const filteredProducts = activeCategory === 'all'
+  const filteredProducts = (activeCategory === 'all'
     ? products
-    : products.filter(p => p.category === activeCategory);
+    : products.filter(p => p.category === activeCategory)).slice(0, 3);
 
   return (
-    <section className="py-20 sm:py-24 bg-[#FAF8F5] relative overflow-hidden" id="product-showcase">
+    <section className="py-20 sm:py-24 bg-[#FAF8F5] relative overflow-hidden" id="product-showcase" aria-label="Curated Dermal Solutions Catalog">
       {/* Visual background circles */}
       <div className="absolute top-1/2 -left-36 w-96 h-96 rounded-full bg-brand-100/20 blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center">
-        
-        <motion.div 
+
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
@@ -59,11 +61,10 @@ export default function ProductShowcase({
               <button
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id as FilterCategory)}
-                className={`relative px-6 py-3 rounded-full text-xs font-semibold uppercase tracking-widest transition-all duration-300 cursor-pointer focus:outline-none ${
-                  isActive
+                className={`relative px-6 py-3 rounded-full text-xs font-semibold uppercase tracking-widest transition-all duration-300 cursor-pointer focus:outline-none ${isActive
                     ? 'text-white'
                     : 'text-stone-700 bg-white border border-stone-200/55 hover:border-brand-400'
-                }`}
+                  }`}
               >
                 {isActive && (
                   <motion.div
@@ -81,7 +82,7 @@ export default function ProductShowcase({
         {/* 4-column responsive grid with entry animations */}
         <motion.div
           layout
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 w-full"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 w-full"
         >
           <AnimatePresence mode="popLayout">
             {filteredProducts.map((product) => (
@@ -105,6 +106,16 @@ export default function ProductShowcase({
             ))}
           </AnimatePresence>
         </motion.div>
+
+        {/* See More Button */}
+        <div className="mt-12 flex justify-center w-full">
+          <button
+            onClick={onExploreAllClick}
+            className="px-8 py-3 bg-brand-500 text-white rounded-full font-semibold uppercase tracking-widest text-xs hover:bg-brand-600 transition-colors shadow-premium focus:outline-none"
+          >
+            See More Products
+          </button>
+        </div>
 
       </div>
     </section>

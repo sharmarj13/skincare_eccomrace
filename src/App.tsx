@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Product, CartItem } from './types';
 import { products } from './data/products';
@@ -7,36 +7,38 @@ import { products } from './data/products';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 
-// Page Views
-import HeroSection from './components/home/HeroSection';
-import FeaturedProducts from './components/home/FeaturedProducts';
-import BrandInfo from './components/home/BrandInfo';
-import ProductShowcase from './components/home/ProductShowcase';
-import Testimonials from './components/home/Testimonials';
-import Newsletter from './components/home/Newsletter';
+// Lazy Loaded Page Views
+const HeroSection = lazy(() => import('./components/home/HeroSection'));
+const FeaturedProducts = lazy(() => import('./components/home/FeaturedProducts'));
+const BrandInfo = lazy(() => import('./components/home/BrandInfo'));
+const ProductShowcase = lazy(() => import('./components/home/ProductShowcase'));
+const Testimonials = lazy(() => import('./components/home/Testimonials'));
+const Newsletter = lazy(() => import('./components/home/Newsletter'));
 
-import ProductsView from './components/products/ProductsView';
-import ProductDetailView from './components/products/ProductDetailView';
-import AboutView from './components/about/AboutView';
-import FAQView from './components/faq/FAQView';
-import ContactView from './components/contact/ContactView';
-import PolicyView from './components/common/PolicyView';
+const ProductsView = lazy(() => import('./components/products/ProductsView'));
+const ProductDetailView = lazy(() => import('./components/products/ProductDetailView'));
+const AboutView = lazy(() => import('./components/about/AboutView'));
+const FAQView = lazy(() => import('./components/faq/FAQView'));
+const ContactView = lazy(() => import('./components/contact/ContactView'));
+const PolicyView = lazy(() => import('./components/common/PolicyView'));
 
 // Common Floating components
 import CartDrawer from './components/common/CartDrawer';
 import FloatingWhatsApp from './components/common/FloatingWhatsApp';
 import ScrollToTop from './components/common/ScrollToTop';
 import Loader from './components/common/Loader';
+import OfferModal from './components/home/OfferModal';
 
 export default function App() {
   const [activePage, setActivePage] = useState<string>('home');
   const [cart, setCart] = useState<CartItem[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isInitialLoading, setIsInitialLoading] = useState(true);
+  const [isOfferModalOpen, setIsOfferModalOpen] = useState(false);
 
   // Load cart from localStorage on boot
   useEffect(() => {
-    const savedCart = localStorage.getItem('sol_botanicals_cart');
+    const savedCart = localStorage.getItem('boonava_cart');
     if (savedCart) {
       try {
         setCart(JSON.parse(savedCart));
@@ -50,13 +52,55 @@ export default function App() {
       setIsInitialLoading(false);
     }, 1800);
 
-    return () => clearTimeout(timer);
+    // Trigger offer modal after 12 seconds
+    const offerTimer = setTimeout(() => {
+      setIsOfferModalOpen(true);
+    }, 12000);
+
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(offerTimer);
+    };
   }, []);
+
+  // SEO Dynamic Meta Tags
+  useEffect(() => {
+    let title = 'Boonava Skin Care Product | Premium Organic Beauty';
+    let metaDescription = 'Buy the best Boonava Skin Care Product online. Discover our premium organic skincare, natural anti-aging face washes, and hydrating body oils. 100% glowing skin guaranteed.';
+
+    if (activePage === 'products') {
+      title = 'Shop Premium Skincare Products | Boonava';
+      metaDescription = 'Explore Boonava Skin Care Products. Natural, premium face and body care products designed for anti-aging, acne-free, and glowing skin. Shop now for best results.';
+    } else if (activePage.startsWith('product/')) {
+      const slug = activePage.split('/')[1];
+      const product = products.find(p => p.slug === slug);
+      if (product) {
+        title = `${product.name} | Boonava Skin Care`;
+        metaDescription = product.description;
+      }
+    } else if (activePage === 'about') {
+      title = 'Our Formulation & Story | Boonava Skin Care';
+      metaDescription = 'Learn about Boonava Skin Care Product formulation. We use cold-pressed natural ingredients for organic, luxurious skincare routines that promote healthy, glowing skin.';
+    } else if (activePage === 'faq') {
+      title = 'Skincare FAQs & Customer Care | Boonava';
+    } else if (activePage === 'contact') {
+      title = 'Contact Boonava Skin Care Product';
+    }
+
+    document.title = title;
+    let metaTag = document.querySelector('meta[name="description"]');
+    if (!metaTag) {
+      metaTag = document.createElement('meta');
+      metaTag.setAttribute('name', 'description');
+      document.head.appendChild(metaTag);
+    }
+    metaTag.setAttribute('content', metaDescription);
+  }, [activePage]);
 
   // Save cart changes to localStorage
   const saveCart = (newCart: CartItem[]) => {
     setCart(newCart);
-    localStorage.setItem('sol_botanicals_cart', JSON.stringify(newCart));
+    localStorage.setItem('boonava_cart', JSON.stringify(newCart));
   };
 
   const handleAddToCart = (product: Product, quantity: number) => {
@@ -137,6 +181,7 @@ export default function App() {
             products={products}
             onAddToCart={handleAddToCart}
             onClickProduct={(slug) => handlePageChange(`product/${slug}`)}
+            onExploreAllClick={() => handlePageChange('products')}
           />
           <Testimonials />
           <Newsletter />
@@ -287,10 +332,12 @@ export default function App() {
           />
 
           {/* Dynamic Router Area with transition presence hooks */}
-          <main className="relative">
-            <AnimatePresence mode="wait">
-              {renderActivePage()}
-            </AnimatePresence>
+          <main className="relative min-h-[50vh]">
+            <Suspense fallback={<Loader />}>
+              <AnimatePresence mode="wait">
+                {renderActivePage()}
+              </AnimatePresence>
+            </Suspense>
           </main>
         </div>
 
@@ -310,6 +357,10 @@ export default function App() {
         {/* Tactical interactive floats */}
         <FloatingWhatsApp />
         <ScrollToTop />
+        <OfferModal 
+          isOpen={isOfferModalOpen} 
+          onClose={() => setIsOfferModalOpen(false)} 
+        />
       </div>
     </>
   );

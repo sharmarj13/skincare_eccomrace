@@ -81,7 +81,7 @@ export default function Header({
             >
               <img 
                 src="/images/brand/logo.jpeg" 
-                alt="SOL Botanicals" 
+                alt="Boonava" 
                 className="h-12 sm:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               />
             </button>
@@ -153,7 +153,7 @@ export default function Header({
             >
               <div>
                 <div className="flex items-center justify-between mb-10">
-                  <span className="font-serif text-xl tracking-[0.15em] font-medium text-[#221F1D]">SÔL BOTANICALS</span>
+                  <span className="font-serif text-xl tracking-[0.15em] font-medium text-[#221F1D]">BOONAVA</span>
                   <button
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="p-1 rounded-full hover:bg-stone-100 cursor-pointer focus:outline-none"
@@ -188,7 +188,7 @@ export default function Header({
                   Pure Citrus-Fused Restorative Skin & Body Soap Rituals. Hand-filled in amber glass containers.
                 </p>
                 <div className="mt-4 flex flex-col gap-1 text-[11px] font-medium tracking-wide text-stone-700">
-                  <span>Inquiries: hello@solbotanicals.com</span>
+                  <span>Inquiries: hello@boonava.com</span>
                   <span>WhatsApp: +1 (234) 567-890</span>
                 </div>
               </div>

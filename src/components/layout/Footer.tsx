@@ -38,7 +38,7 @@ export default function Footer({ onChangePage }: FooterProps) {
             <div>
               <img 
                 src="/images/brand/white-logo.jpeg" 
-                alt="SOL Botanicals" 
+                alt="Boonava" 
                 className="h-10 sm:h-12 w-auto object-contain"
               />
             </div>
@@ -85,7 +85,7 @@ export default function Footer({ onChangePage }: FooterProps) {
           {/* Column 3: Brand & FAQs */}
           <div>
             <h3 className="text-xs uppercase tracking-[0.25em] font-semibold text-brand-300 mb-6">
-              The SÔL Source
+              Boonava Care
             </h3>
             <ul className="flex flex-col gap-3.5">
               {brandLinks.map((link, idx) => (
@@ -125,7 +125,7 @@ export default function Footer({ onChangePage }: FooterProps) {
               <div className="flex items-start gap-3">
                 <Mail className="w-4 h-4 text-brand-400 shrink-0 mt-0.5" />
                 <span className="text-sm text-stone-400 font-light">
-                  hello@solbotanicals.com
+                  hello@boonava.com
                 </span>
               </div>
             </div>
@@ -148,7 +148,7 @@ export default function Footer({ onChangePage }: FooterProps) {
           </div>
 
           <p className="font-light tracking-wide text-center md:text-right">
-            &copy; 2026 SÓL Botanicals LLC. Hand-filled in California.
+            &copy; 2026 Boonava Skin Care LLC.
           </p>
         </div>
       </div>

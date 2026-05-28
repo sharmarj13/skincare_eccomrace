@@ -4,22 +4,16 @@ export default function Loader() {
   return (
     <div className="fixed inset-0 z-50 bg-[#FAF8F5] flex flex-col items-center justify-center">
       <div className="relative flex flex-col items-center">
-        {/* Animated logo ring */}
-        <motion.div
-          animate={{ rotate: 360 }}
-          transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
-          className="w-16 h-16 rounded-full border-2 border-brand-100 border-t-brand-500 mb-6"
-        />
-
-        {/* Brand floating label */}
-        <motion.h1
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: [0, 1, 0.5, 1], y: 0 }}
-          transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
-          className="font-serif text-xl font-medium tracking-[0.2em] text-[#221F1D]"
-        >
-          SÔL BOTANICALS
-        </motion.h1>
+        {/* Animated logo image */}
+        <div className="relative flex items-center justify-center mb-8">
+          <motion.img 
+            animate={{ opacity: [0.5, 1, 0.5] }}
+            transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+            src="/images/brand/logo.jpeg" 
+            alt="Boonava Logo" 
+            className="h-24 sm:h-28 w-auto object-contain"
+          />
+        </div>
 
         <motion.p
           initial={{ opacity: 0 }}

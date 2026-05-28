@@ -22,7 +22,7 @@ export default function FeaturedProducts({
   const featured = products.filter((p) => p.isFeatured).slice(0, 3);
 
   return (
-    <section className="py-20 sm:py-24 bg-[#FAF8F5] relative overflow-hidden" id="featured-products">
+    <section className="py-20 sm:py-24 bg-[#FAF8F5] relative overflow-hidden" id="featured-products" aria-label="Featured Botanical Essentials">
       {/* Visual background details */}
       <div className="absolute right-0 top-10 w-96 h-96 h-[380px] rounded-full bg-brand-50/40 filter blur-3xl opacity-60" />
 
