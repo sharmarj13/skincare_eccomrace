@@ -35,14 +35,14 @@ export default function AboutView() {
       <PageBanner
         title="Our Story & Aligned Philosophy"
         subtitle="Unveiling Pure Dermal Luxury"
-        backgroundImage="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=1200&auto=format&fit=crop"
+        backgroundImage="/images/brand/hero_banner.jpg"
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 sm:mt-20">
-        
+
         {/* The Founders/Story Intro row */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 items-center">
-          
+
           <div className="text-left">
             <span className="text-xs uppercase tracking-[0.25em] font-semibold text-brand-500 mb-3 block">
               The Complete Daily Routine
@@ -50,11 +50,11 @@ export default function AboutView() {
             <h2 className="font-serif text-3xl sm:text-4xl font-medium tracking-tight text-[#221F1D] leading-tight mb-6">
               Born from a search for a simple, highly effective skincare routine.
             </h2>
-            
+
             <p className="text-[#221F1D] font-light text-base leading-relaxed mb-4">
               Our journey began when we realized that achieving glowing, flawless skin shouldn't require a complicated 10-step process or incredibly expensive treatments. Most people just need high-quality basics that actually work.
             </p>
-            
+
             <p className="text-stone-500 font-light text-sm leading-relaxed mb-6">
               We decided to cut through the noise and create the ultimate everyday lineup. We formulated a powerful Vit C Face Wash and Serum for brightening, a 24-hour Moisturizer Cream for deep hydration, an invisible Sunscreen SPF 50 for absolute protection, and a refreshing Lemon Body Wash. It's everything you need for healthy, radiant skin.
             </p>
@@ -68,10 +68,10 @@ export default function AboutView() {
             {/* Embedded side decor art */}
             <div className="absolute -top-6 -left-6 w-12 h-12 border-t border-l border-brand-300 pointer-events-none" />
             <div className="absolute -bottom-6 -right-6 w-12 h-12 border-b border-r border-brand-300 pointer-events-none" />
-            
+
             <div className="rounded-2xl overflow-hidden shadow-premium-xl border border-white/60 aspect-[4/3] bg-stone-100">
               <img
-                src="https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=800&auto=format&fit=crop"
+                src="/images/brand/add-product.jpg"
                 alt="Slow botanical filtering processes inside laboratory"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
@@ -85,7 +85,7 @@ export default function AboutView() {
         <div className="mt-24 sm:mt-32 p-8 sm:p-14 bg-[#1C1917] rounded-3xl text-white relative overflow-hidden shadow-premium-xl">
           {/* Subtle background glow */}
           <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-brand-500/10 blur-3xl" />
-          
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 relative z-10">
             {stats.map((stat, idx) => (
               <motion.div

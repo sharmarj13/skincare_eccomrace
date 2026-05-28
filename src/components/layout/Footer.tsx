@@ -39,7 +39,7 @@ export default function Footer({ onChangePage }: FooterProps) {
               />
             </div>
             
-            <p className="text-sm text-stone-400 font-light leading-relaxed">
+            <p className="text-sm text-stone-200 font-light leading-relaxed">
               Formulating exceptionally pure, pH-balanced washes and skin essences infused with medical-grade blood orange actives and distilled neroli blossoms. Engineered beautifully for deep hydration.
             </p>
 
@@ -82,7 +82,7 @@ export default function Footer({ onChangePage }: FooterProps) {
                 <li key={idx}>
                   <button
                     onClick={() => handlePageClick(link.id)}
-                    className="text-sm font-light text-stone-400 hover:text-white transition-colors duration-200 cursor-pointer text-left focus:outline-none"
+                    className="text-sm font-light text-white hover:text-brand-500 hover:underline transition-all duration-200 cursor-pointer text-left focus:outline-none"
                   >
                     {link.label}
                   </button>
@@ -91,8 +91,24 @@ export default function Footer({ onChangePage }: FooterProps) {
             </ul>
           </div>
 
-          {/* Column 3: Empty to balance grid since we combined menus */}
-          <div className="hidden lg:block"></div>
+          {/* Column 3: Legal Policies */}
+          <div>
+            <h3 className="text-xs uppercase tracking-[0.25em] font-semibold text-brand-300 mb-6">
+              Legal
+            </h3>
+            <ul className="flex flex-col gap-3.5">
+              {policyLinks.map((link, idx) => (
+                <li key={idx}>
+                  <button
+                    onClick={() => handlePageClick(link.id)}
+                    className="text-sm font-light text-white hover:text-brand-500 hover:underline transition-all duration-200 cursor-pointer text-left focus:outline-none"
+                  >
+                    {link.label}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
 
           {/* Column 4: Contact Lab Details */}
           <div className="flex flex-col gap-5">
@@ -103,21 +119,21 @@ export default function Footer({ onChangePage }: FooterProps) {
             <div className="flex flex-col gap-4">
               <div className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-brand-400 shrink-0 mt-0.5" />
-                <span className="text-sm text-stone-400 font-light leading-relaxed">
+                <span className="text-sm text-stone-200 font-light leading-relaxed">
                   Tumkur -572104
                 </span>
               </div>
 
               <div className="flex items-start gap-3">
                 <Phone className="w-4 h-4 text-brand-400 shrink-0 mt-0.5" />
-                <span className="text-sm text-stone-400 font-light">
+                <span className="text-sm text-stone-200 font-light">
                   +91 9024234466
                 </span>
               </div>
 
               <div className="flex items-start gap-3">
                 <Mail className="w-4 h-4 text-brand-400 shrink-0 mt-0.5" />
-                <span className="text-sm text-stone-400 font-light">
+                <span className="text-sm text-stone-200 font-light">
                   boonavacare@gmail.com
                 </span>
               </div>
@@ -126,22 +142,10 @@ export default function Footer({ onChangePage }: FooterProps) {
 
         </div>
 
-        {/* Footer Sub Bar with Policies */}
-        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-stone-500">
-          <div className="flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-2">
-            {policyLinks.map((link, idx) => (
-              <button
-                key={idx}
-                onClick={() => handlePageClick(link.id)}
-                className="hover:text-white transition-colors cursor-pointer focus:outline-none"
-              >
-                {link.label}
-              </button>
-            ))}
-          </div>
-
-          <p className="font-light tracking-wide text-center md:text-right">
-            &copy; 2026 Boonava Skin Care LLC.
+        {/* Footer Sub Bar with Copyright */}
+        <div className="pt-8 flex justify-center items-center">
+          <p className="text-sm font-medium tracking-wide text-center text-white">
+            &copy; {new Date().getFullYear()} Boonava Care. All rights reserved.
           </p>
         </div>
       </div>
