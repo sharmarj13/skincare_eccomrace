@@ -173,14 +173,14 @@ export default function ProductDetailView({
             <div className="mb-6 pt-3 border-t border-stone-200/50 w-full">
               {hasDiscount ? (
                 <div className="flex items-baseline gap-3">
-                  <span className="text-2xl sm:text-3xl font-serif font-semibold text-brand-600">${product.discountPrice?.toFixed(2)}</span>
-                  <span className="text-stone-400 line-through text-sm font-light">${product.price.toFixed(2)}</span>
+                  <span className="text-2xl sm:text-3xl font-serif font-semibold text-brand-600">₹{product.discountPrice?.toFixed(2)}</span>
+                  <span className="text-stone-400 line-through text-sm font-light">₹{product.price.toFixed(2)}</span>
                   <span className="bg-brand-50 text-brand-600 font-bold text-[9px] uppercase tracking-widest px-3 py-1 rounded-full border border-brand-100">
-                    Save ${(product.price - (product.discountPrice ?? 0)).toFixed(2)}
+                    Save ₹{(product.price - (product.discountPrice ?? 0)).toFixed(2)}
                   </span>
                 </div>
               ) : (
-                <span className="text-2xl sm:text-3xl font-serif font-semibold text-stone-900">${product.price.toFixed(2)}</span>
+                <span className="text-2xl sm:text-3xl font-serif font-semibold text-stone-900">₹{product.price.toFixed(2)}</span>
               )}
             </div>
 
@@ -283,7 +283,7 @@ export default function ProductDetailView({
             {/* Quick trust assurances badge list */}
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 pt-6 border-t border-stone-100 w-full text-[11px] text-stone-500">
               <span className="flex items-center gap-1.5 font-medium uppercase tracking-wider">
-                <ShieldCheck className="w-4 h-4 text-emerald-500" /> Free Shipping Post $50
+                <ShieldCheck className="w-4 h-4 text-emerald-500" /> Free Shipping Post ₹50
               </span>
               <span className="flex items-center gap-1.5 font-medium uppercase tracking-wider">
                 <RefreshCw className="w-4 h-4 text-emerald-500" /> 30-Day Luminous Guarantee

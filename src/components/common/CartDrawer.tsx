@@ -241,19 +241,19 @@ export default function CartDrawer({
                     {/* Price list */}
                     <div className="flex items-center justify-between text-sm py-2">
                       <span className="text-stone-600 font-light">Order Subtotal</span>
-                      <span className="font-semibold text-stone-850">${subtotal.toFixed(2)}</span>
+                      <span className="font-semibold text-stone-850">₹{subtotal.toFixed(2)}</span>
                     </div>
                     <div className="flex items-center justify-between text-sm py-2 border-t border-stone-100">
                       <span className="text-stone-600 font-light">Packaging & Courier dispatch</span>
-                      <span className="font-semibold text-stone-850">{isFreeShipping ? 'FREE' : '$10.00'}</span>
+                      <span className="font-semibold text-stone-850">{isFreeShipping ? 'FREE' : '₹10.00'}</span>
                     </div>
                     <div className="flex items-center justify-between text-base py-3 border-t border-stone-200 font-bold block">
                       <span className="text-[#221F1D]">Absolute Total</span>
-                      <span className="text-brand-500">${(subtotal + (isFreeShipping ? 0 : 10)).toFixed(2)}</span>
+                      <span className="text-brand-500">₹{(subtotal + (isFreeShipping ? 0 : 10)).toFixed(2)}</span>
                     </div>
 
                     <CustomButton type="submit" variant="primary" size="lg" className="w-full mt-4">
-                      Finalize Purchase (${(subtotal + (isFreeShipping ? 0 : 10)).toFixed(2)})
+                      Finalize Purchase (₹{(subtotal + (isFreeShipping ? 0 : 10)).toFixed(2)})
                     </CustomButton>
                   </div>
 
@@ -271,7 +271,7 @@ export default function CartDrawer({
                     ) : (
                       <div className="text-xs">
                         <p className="font-medium text-stone-700">
-                          Add only <span className="font-bold text-brand-600">${awayFromFreeShipping.toFixed(2)}</span> more to unlock <span className="font-bold">FREE DHL Shipping</span>!
+                          Add only <span className="font-bold text-brand-600">₹{awayFromFreeShipping.toFixed(2)}</span> more to unlock <span className="font-bold">FREE DHL Shipping</span>!
                         </p>
                         {/* Interactive progress bar */}
                         <div className="w-full h-1.5 bg-stone-200 rounded-full mt-2 overflow-hidden">
@@ -347,7 +347,7 @@ export default function CartDrawer({
 
                           {/* Prices */}
                           <div className="shrink-0 flex flex-col items-end justify-between py-1 font-bold text-stone-850">
-                            <span>${(itemPrice * item.quantity).toFixed(2)}</span>
+                            <span>₹{(itemPrice * item.quantity).toFixed(2)}</span>
                           </div>
 
                         </div>
@@ -359,17 +359,17 @@ export default function CartDrawer({
                   <div className="mt-auto pt-6 border-t border-stone-200">
                     <div className="flex items-center justify-between text-sm py-2">
                       <span className="text-stone-500 font-light">Subtotal</span>
-                      <span className="font-semibold text-stone-850">${subtotal.toFixed(2)}</span>
+                      <span className="font-semibold text-stone-850">₹{subtotal.toFixed(2)}</span>
                     </div>
 
                     <div className="flex items-center justify-between text-sm py-2 border-t border-stone-100">
                       <span className="text-stone-500 font-light">Courier Dispatch</span>
-                      <span className="font-semibold text-stone-850">{isFreeShipping ? 'FREE' : '$10.00'}</span>
+                      <span className="font-semibold text-stone-850">{isFreeShipping ? 'FREE' : '₹10.00'}</span>
                     </div>
 
                     <div className="flex items-center justify-between text-base py-3 border-t border-stone-200 font-bold block">
                       <span className="text-stone-900">Immediate Total</span>
-                      <span className="text-brand-500">${(subtotal + (isFreeShipping ? 0 : 10)).toFixed(2)}</span>
+                      <span className="text-brand-500">₹{(subtotal + (isFreeShipping ? 0 : 10)).toFixed(2)}</span>
                     </div>
 
                     <div className="mt-6 flex flex-col gap-3">

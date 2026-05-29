@@ -50,7 +50,7 @@ export default function Header({
       {/* Dynamic top ticker bar */}
       <div className="w-full bg-[#1C1917] text-white text-[11px] font-medium tracking-[0.22em] uppercase py-2.5 px-4 flex items-center justify-center gap-2 overflow-hidden select-none border-b border-white/5">
         <Sparkles className="w-3.5 h-3.5 text-brand-400 animate-pulse" />
-        <span>GIFT COMPLIMENTARY NEROLI OIL SAMPLE ON ALL PRODUCTS OVER $50</span>
+        <span>GIFT COMPLIMENTARY NEROLI OIL SAMPLE ON ALL PRODUCTS OVER ₹50</span>
         <span className="hidden md:inline">| SECURE DHL WORLDWIDE PACKAGING</span>
       </div>
 

@@ -126,11 +126,11 @@ export default function ProductCard({ product, onAddToCart, onClickCard }: Produ
           <div>
             {hasDiscount ? (
               <div className="flex items-baseline gap-2">
-                <span className="text-base font-bold text-stone-900">${product.discountPrice?.toFixed(2)}</span>
-                <span className="text-xs text-stone-400 line-through font-light">${product.price.toFixed(2)}</span>
+                <span className="text-base font-bold text-stone-900">₹{product.discountPrice?.toFixed(2)}</span>
+                <span className="text-xs text-stone-400 line-through font-light">₹{product.price.toFixed(2)}</span>
               </div>
             ) : (
-              <span className="text-base font-bold text-stone-900">${product.price.toFixed(2)}</span>
+              <span className="text-base font-bold text-stone-900">₹{product.price.toFixed(2)}</span>
             )}
           </div>
 
