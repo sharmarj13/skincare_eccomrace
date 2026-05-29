@@ -93,7 +93,7 @@ export default function ProductDetailView({
                 alt={product.name}
                 loading="eager"
                 decoding="async"
-                className="w-full h-full object-cover transition-transform duration-700 ease-out"
+                className="w-full h-full object-contain transition-transform duration-700 ease-out"
                 referrerPolicy="no-referrer"
               />
               
@@ -119,7 +119,7 @@ export default function ProductDetailView({
                     <img
                       src={imgUrl}
                       alt={`${product.name} gallery ${index + 1}`}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
                       referrerPolicy="no-referrer"
                     />
                   </button>
@@ -135,12 +135,6 @@ export default function ProductDetailView({
             <div className="flex items-center justify-between w-full mb-3">
               <span className="text-xs uppercase tracking-[0.25em] font-semibold text-brand-500">
                 {product.category === 'face' ? 'Signature Face Care' : product.category === 'body' ? 'Restorative Body' : 'Botanical Gift Set'}
-              </span>
-              
-              <span className={`text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full ${
-                product.stock > 0 ? 'bg-emerald-50 text-emerald-700 border border-emerald-100' : 'bg-red-50 text-red-700'
-              }`}>
-                {product.stock > 0 ? `In Stock (${product.stock} available)` : 'Sold Out'}
               </span>
             </div>
 

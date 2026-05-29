@@ -104,8 +104,15 @@ export const products: Product[] = [
       'Green Tea Extract'
     ],
     usage: 'Scoop a pea-sized amount and dot it across your face and neck. Massage gently in upward, outward circles until perfectly blended.',
-    image: '/images/brand/moisturizing-cream.jpeg',
-    secondaryImages: ['/images/brand/moisturizing-cream.jpeg'],
+    image: '/images/brand/m-1.jpeg',
+    secondaryImages: [
+      '/images/brand/m-1.jpeg',
+      '/images/brand/m-2.jpeg',
+      '/images/brand/m-3.jpeg',
+      '/images/brand/m-4.jpeg',
+      '/images/brand/m-5.jpeg',
+      '/images/brand/m-6.jpeg'
+    ],
     rating: 4.7,
     reviewCount: 88,
     size: '50ml | 1.7 FL. OZ',
