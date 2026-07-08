@@ -6,8 +6,8 @@ import { Sparkles, Compass, ShieldAlert, Users, Flower, Feather } from 'lucide-r
 export default function AboutView() {
   const stats = [
     { number: '100%', label: 'Active Ingredients', desc: 'No cheap fillers. We use potent, stable Vitamin C and deep hydrators.' },
-    { number: 'SPF50', label: 'Maximum Protection', desc: 'Broad-spectrum UVA/UVB defense without any sticky white cast.' },
-    { number: '24-Hr', label: 'Deep Hydration', desc: 'Our Moisturizer Cream locks in moisture for a full 24 hours of plumpness.' },
+    { number: 'SPF 50', label: 'Maximum Protection', desc: 'Broad-spectrum UVA/UVB defense without any sticky white cast.' },
+    { number: '24-Hr', label: 'Deep Hydration', desc: 'Our Hydrating Moisturizer Cream locks in moisture for a full 24 hours of plumpness.' },
     { number: '50K+', label: 'Glowing Customers', desc: 'Restoring confidence and radiant skin to over 50,000 customers globally.' }
   ];
 
@@ -15,12 +15,12 @@ export default function AboutView() {
     {
       icon: <Flower className="w-5 h-5 text-brand-600" />,
       title: 'Brighten & Revitalize',
-      text: 'Our Vit C Face Wash and Face Serum combination clears away dullness and rapidly fades dark spots.'
+      text: 'Our Vitamin C Face Wash and Vitamin C Face Serum combination clears away dullness and rapidly fades dark spots.'
     },
     {
       icon: <ShieldAlert className="w-5 h-5 text-brand-600" />,
       title: 'Defend & Protect',
-      text: 'Our Sunscreen Spf50 PA++++ acts as an invisible shield against tanning, sunburn, and premature aging.'
+      text: 'Our Sunscreen SPF 50 PA++++ acts as an invisible shield against tanning, sunburn, and premature aging.'
     },
     {
       icon: <Compass className="w-5 h-5 text-brand-600" />,
@@ -56,7 +56,7 @@ export default function AboutView() {
             </p>
 
             <p className="text-stone-500 font-light text-sm leading-relaxed mb-6">
-              We decided to cut through the noise and create the ultimate everyday lineup. We formulated a powerful Vit C Face Wash and Serum for brightening, a 24-hour Moisturizer Cream for deep hydration, an invisible Sunscreen SPF 50 for absolute protection, and a refreshing Lemon Body Wash. It's everything you need for healthy, radiant skin.
+              We decided to cut through the noise and create the ultimate everyday lineup. We formulated a powerful Vitamin C Face Wash and Vitamin C Face Serum for brightening, a 24-hour Hydrating Moisturizer Cream for deep hydration, an invisible Sunscreen SPF 50 for absolute protection, and a refreshing Lemon Body Wash. It's everything you need for healthy, radiant skin.
             </p>
 
             <blockquote className="border-l-2 border-brand-500 pl-6 my-6 italic text-stone-850 text-sm font-medium">
@@ -114,7 +114,7 @@ export default function AboutView() {
         <div className="mt-24 sm:mt-32 text-center flex flex-col items-center">
           <SectionHeading
             subtitle="The Pillars"
-            title="SÔL Botanical Core Values"
+            title="Boonava Care Core Values"
             description="Our three key promises to your skin's health. Craftsmanship, biocompatibility, and pure organic clinical results."
           />
 

@@ -118,11 +118,11 @@ export default function CartDrawer({
                   </div>
                   <h3 className="font-serif text-2xl font-semibold text-stone-900">Order Dispatched!</h3>
                   <p className="text-stone-500 text-xs sm:text-sm font-light leading-relaxed max-w-sm mt-3">
-                    Your luxury SÔL washes have sailed our checkout. A carbon-neutral carrier will transmit delivery alerts within 12 business hours.
+                    Your luxury Boonava washes have sailed our checkout. A carbon-neutral carrier will transmit delivery alerts within 12 business hours.
                   </p>
                   
                   <div className="mt-8 p-4 bg-brand-50 rounded-2xl border border-brand-100/50 flex flex-col gap-1 text-[11px] font-medium tracking-wide text-stone-700 w-full mb-8">
-                    <span>Order Reference Score: SOL-2026-94827</span>
+                    <span>Order Reference Score: BNV-2026-94827</span>
                     <span>Carrier Services: DHL Sustainable Express</span>
                   </div>
 
@@ -395,7 +395,7 @@ export default function CartDrawer({
                   </div>
                   <h3 className="font-serif text-lg font-semibold text-stone-900">Your bag is dry</h3>
                   <p className="text-stone-500 text-xs font-light max-w-xs mt-2 leading-relaxed">
-                    You have not selected SÔL Botanical formulas yet. Fill your water routine with Citrus and Neroli.
+                    You have not selected Boonava Care formulas yet. Fill your skincare routine with glowing ingredients.
                   </p>
                   <button
                     onClick={onClose}

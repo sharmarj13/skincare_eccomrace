@@ -4,12 +4,12 @@ export const products: Product[] = [
   {
     id: 'prod-01',
     slug: 'vit-c-face-wash',
-    name: 'Vit C face wash',
+    name: 'Vitamin C Face Wash',
     category: 'face',
     price: 349.00,
     discountPrice: 349.00,
     description: 'A deeply refreshing Vitamin C Face Wash that gently cleanses impurities while giving your skin a radiant, natural glow every morning.',
-    longDescription: 'Our best-selling Vit C face wash is your daily secret to glowing, refreshed skin. Formulated to tackle dullness and even out your skin tone, this gentle yet effective cleanser washes away dirt, excess oil, and impurities without stripping your skin\'s natural moisture. Packed with powerful antioxidants, it revitalizes tired skin and leaves you looking bright and energized.',
+    longDescription: 'Our best-selling Vitamin C Face Wash is your daily secret to glowing, refreshed skin. Formulated to tackle dullness and even out your skin tone, this gentle yet effective cleanser washes away dirt, excess oil, and impurities without stripping your skin\'s natural moisture. Packed with powerful antioxidants, it revitalizes tired skin and leaves you looking bright and energized.',
     benefits: [
       'Brightens skin tone and boosts natural radiance',
       'Removes daily dirt and excess oil gently',
@@ -24,8 +24,18 @@ export const products: Product[] = [
       'Gentle plant-based cleansers'
     ],
     usage: 'Take a coin-sized amount onto damp hands. Gently massage onto your face in circular motions for 30-60 seconds. Rinse thoroughly with water. Use morning and night for best results.',
-    image: '/images/brand/fash-wash.jpeg',
-    secondaryImages: ['/images/brand/fash-wash.jpeg'],
+    image: '/images/face-wash/4.jpeg',
+    secondaryImages: [
+      '/images/face-wash/1.jpeg',
+      '/images/face-wash/2.jpeg',
+      '/images/face-wash/3.jpeg',
+      '/images/face-wash/5.jpeg',
+      '/images/face-wash/6.jpeg',
+      '/images/face-wash/7.jpeg',
+      '/images/face-wash/8.jpeg',
+      '/images/face-wash/9.jpeg',
+      '/images/face-wash/10.jpeg'
+    ],
     rating: 4.8,
     reviewCount: 124,
     size: '150ml | 5.1 FL. OZ',
@@ -45,11 +55,11 @@ export const products: Product[] = [
   {
     id: 'prod-02',
     slug: 'vit-c-face-serum',
-    name: 'Vit C Face Serum',
+    name: 'Vitamin C Face Serum',
     category: 'face',
     price: 699.00,
     description: 'A fast-absorbing, high-potency Vitamin C Face Serum designed to reduce pigmentation, boost collagen, and give you flawless, youthful skin.',
-    longDescription: 'Say goodbye to dark spots and uneven texture with our advanced Vit C Face Serum. This lightweight formula penetrates deeply to repair skin damage and stimulate collagen production. Perfect for achieving a glass-skin look, it acts as a powerful anti-aging barrier while keeping your skin visibly plump, hydrated, and radiant.',
+    longDescription: 'Say goodbye to dark spots and uneven texture with our advanced Vitamin C Face Serum. This lightweight formula penetrates deeply to repair skin damage and stimulate collagen production. Perfect for achieving a glass-skin look, it acts as a powerful anti-aging barrier while keeping your skin visibly plump, hydrated, and radiant.',
     benefits: [
       'Significantly reduces dark spots and pigmentation',
       'Boosts collagen for an anti-aging effect',
@@ -64,8 +74,14 @@ export const products: Product[] = [
       'Witch Hazel Extract'
     ],
     usage: 'Apply 3-4 drops directly to a clean face and neck. Gently dab and press the serum into your skin until fully absorbed. Follow up with a moisturizer.',
-    image: '/images/brand/face-serm.jpeg',
-    secondaryImages: ['/images/brand/face-serm.jpeg'],
+    image: '/images/face-serum/2.jpeg',
+    secondaryImages: [
+      '/images/face-serum/1.jpeg',
+      '/images/face-serum/3.jpeg',
+      '/images/face-serum/4.jpeg',
+      '/images/face-serum/5.jpeg',
+      '/images/face-serum/6.jpeg'
+    ],
     rating: 4.9,
     reviewCount: 96,
     size: '30ml | 1.0 FL. OZ',
@@ -85,7 +101,7 @@ export const products: Product[] = [
   {
     id: 'prod-03',
     slug: 'moisturizer-cream',
-    name: 'Moisturizer Cream',
+    name: 'Hydrating Moisturizer Cream',
     category: 'face',
     price: 449.00,
     description: 'A deeply nourishing Moisturizer Cream that locks in hydration for 24 hours, leaving your skin feeling silky smooth without any greasy residue.',
@@ -104,14 +120,11 @@ export const products: Product[] = [
       'Green Tea Extract'
     ],
     usage: 'Scoop a pea-sized amount and dot it across your face and neck. Massage gently in upward, outward circles until perfectly blended.',
-    image: '/images/brand/m-1.jpeg',
+    image: '/images/moisturizing/2.jpeg',
     secondaryImages: [
-      '/images/brand/m-1.jpeg',
-      '/images/brand/m-2.jpeg',
-      '/images/brand/m-3.jpeg',
-      '/images/brand/m-4.jpeg',
-      '/images/brand/m-5.jpeg',
-      '/images/brand/m-6.jpeg'
+      '/images/moisturizing/1.jpeg',
+      '/images/moisturizing/3.jpeg',
+      '/images/moisturizing/4.jpeg'
     ],
     rating: 4.7,
     reviewCount: 88,
@@ -132,7 +145,7 @@ export const products: Product[] = [
   {
     id: 'prod-04',
     slug: 'lemon-body-wash',
-    name: 'Lemon Body wash',
+    name: 'Lemon Body Wash',
     category: 'body',
     price: 349.00,
     description: 'A refreshing and zesty Lemon Body Wash that awakens your senses, deeply cleanses, and leaves your skin feeling incredibly soft and energized.',
@@ -151,8 +164,16 @@ export const products: Product[] = [
       'Aloe Vera Leaf Juice'
     ],
     usage: 'Pour a generous amount onto a wet loofah or your hands. Work into a rich lather and massage over your entire body. Rinse thoroughly.',
-    image: '/images/brand/body-wash.jpeg',
-    secondaryImages: ['/images/brand/body-wash.jpeg'],
+    image: '/images/body-wash/3.jpeg',
+    secondaryImages: [
+      '/images/body-wash/1.jpeg',
+      '/images/body-wash/2.jpeg',
+      '/images/body-wash/4.jpeg',
+      '/images/body-wash/5.jpeg',
+      '/images/body-wash/6.jpeg',
+      '/images/body-wash/7.jpeg',
+      '/images/body-wash/8.jpeg'
+    ],
     rating: 4.8,
     reviewCount: 110,
     size: '300ml | 10.1 FL. OZ',
@@ -172,12 +193,12 @@ export const products: Product[] = [
   {
     id: 'prod-05',
     slug: 'sunscreen-spf50',
-    name: 'Sunscreen Spf50 PA++++',
+    name: 'Sunscreen SPF 50 PA++++',
     category: 'face',
     price: 499.00,
     discountPrice: 499.00,
-    description: 'A broad-spectrum Sunscreen SPF50 PA++++ that provides maximum protection against UVA and UVB rays without leaving a white cast or greasy feel.',
-    longDescription: 'Never step out without our ultimate Sunscreen SPF50 PA++++. Specially formulated to offer heavy-duty protection against sun damage, premature aging, and tanning. It features an ultra-light, non-sticky formula that blends seamlessly into all skin tones, leaving zero white cast. Perfect for everyday wear, even under makeup.',
+    description: 'A broad-spectrum Sunscreen SPF 50 PA++++ that provides maximum protection against UVA and UVB rays without leaving a white cast or greasy feel.',
+    longDescription: 'Never step out without our ultimate Sunscreen SPF 50 PA++++. Specially formulated to offer heavy-duty protection against sun damage, premature aging, and tanning. It features an ultra-light, non-sticky formula that blends seamlessly into all skin tones, leaving zero white cast. Perfect for everyday wear, even under makeup.',
     benefits: [
       'Maximum SPF 50 PA++++ broad-spectrum protection',
       'Zero white cast, blends seamlessly into all skin tones',
@@ -192,8 +213,14 @@ export const products: Product[] = [
       'Aloe Vera Base'
     ],
     usage: 'Apply a generous amount (about two fingers worth) evenly to your face, neck, and exposed areas 15 minutes before sun exposure. Reapply every 3-4 hours.',
-    image: '/images/brand/sceencare.jpeg',
-    secondaryImages: ['/images/brand/sceencare.jpeg'],
+    image: '/images/sunscreen/1.jpeg',
+    secondaryImages: [
+      '/images/sunscreen/2.jpeg',
+      '/images/sunscreen/3.jpeg',
+      '/images/sunscreen/4.jpeg',
+      '/images/sunscreen/5.jpeg',
+      '/images/sunscreen/6.jpeg'
+    ],
     rating: 5.0,
     reviewCount: 38,
     size: 'Complete Ritual Set',

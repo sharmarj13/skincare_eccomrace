@@ -15,7 +15,7 @@ export const testimonials: Testimonial[] = [
     role: 'Makeup Artist & Beauty Blogger',
     avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop',
     rating: 5,
-    quote: 'The Vit C Face Serum has been an absolute game-changer for my clients! It fades dark spots so beautifully and leaves a glowing, glass-skin finish before I even apply makeup. Highly recommend it!',
+    quote: 'The Vitamin C Face Serum has been an absolute game-changer for my clients! It fades dark spots so beautifully and leaves a glowing, glass-skin finish before I even apply makeup. Highly recommend it!',
     skinType: 'Pigmentation / Dull Skin'
   },
   {
@@ -33,7 +33,7 @@ export const testimonials: Testimonial[] = [
     role: 'Corporate Executive',
     avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop',
     rating: 5,
-    quote: 'Working 10-hour days in an AC office ruined my skin until I found the Moisturizer Cream. It deeply hydrates for a full 24 hours without feeling heavy. My skin finally feels plump and healthy again.',
+    quote: 'Working 10-hour days in an AC office ruined my skin until I found the Hydrating Moisturizer Cream. It deeply hydrates for a full 24 hours without feeling heavy. My skin finally feels plump and healthy again.',
     skinType: 'Dry & Dehydrated skin'
   },
   {
@@ -42,7 +42,7 @@ export const testimonials: Testimonial[] = [
     role: 'Travel Photographer',
     avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=200&auto=format&fit=crop',
     rating: 5,
-    quote: 'I spend hours in the sun every day. This Sunscreen Spf50 PA++++ is a lifesaver! Zero white cast, blends like a dream, and it actually protects my face from tanning. Better than expensive international brands.',
+    quote: 'I spend hours in the sun every day. This Sunscreen SPF 50 PA++++ is a lifesaver! Zero white cast, blends like a dream, and it actually protects my face from tanning. Better than expensive international brands.',
     skinType: 'Sun-Exposed / Sensitive skin'
   }
 ];

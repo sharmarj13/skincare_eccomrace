@@ -77,7 +77,7 @@ export default function App() {
   // SEO Dynamic Meta Tags
   useEffect(() => {
     let title = 'Boonava Care | Glowing Skin & Vitamin C Face Wash';
-    let metaDescription = 'Buy the best Boonava Care skincare products. Discover our premium Vitamin C Face Wash, Anti-Aging Serum, Sunscreen SPF50, and Hydrating Moisturizer for glowing skin.';
+    let metaDescription = 'Buy the best Boonava Care skincare products. Discover our premium Vitamin C Face Wash, Anti-Aging Serum, Sunscreen SPF 50, and Hydrating Moisturizer for glowing skin.';
 
     if (activePage === 'products') {
       title = 'Shop Best Skincare Routine | Boonava Care';

@@ -38,7 +38,7 @@ export default function ContactView() {
     <div className="bg-[#FAF8F5] pb-24 text-left">
       {/* Banner */}
       <PageBanner
-        title="Connect With SÔL Lab"
+        title="Connect With Boonava Lab"
         subtitle="Botanical Diagnostics Helpdesk"
         backgroundImage="https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=1200&auto=format&fit=crop"
       />
@@ -260,7 +260,7 @@ export default function ContactView() {
 
           <div className="relative z-10 bg-white/95 p-6 sm:p-8 rounded-2xl shadow-premium-xl max-w-md mx-4 border border-stone-100 text-center flex flex-col items-center">
             <span className="text-[10px] uppercase tracking-[0.22em] font-semibold text-[#f95f10] mb-2 font-medium">Headquarters Pavilion</span>
-            <h3 className="font-serif text-lg font-medium text-[#221F1D] mb-2 leading-tight">SÔL Botanicals Critical Lab</h3>
+            <h3 className="font-serif text-lg font-medium text-[#221F1D] mb-2 leading-tight">Boonava Care Lab</h3>
             <p className="text-stone-500 text-xs font-light leading-relaxed">
               Tumkur -572104 <br />
               Come by for our on-site sensory hydration bar & botanical trials.

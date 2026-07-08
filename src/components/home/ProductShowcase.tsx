@@ -29,9 +29,9 @@ export default function ProductShowcase({
   ];
 
   // Curate filtered list
-  const filteredProducts = (activeCategory === 'all'
+  const filteredProducts = activeCategory === 'all'
     ? products
-    : products.filter(p => p.category === activeCategory)).slice(0, 3);
+    : products.filter(p => p.category === activeCategory);
 
   return (
     <section className="py-20 sm:py-24 bg-[#FAF8F5] relative overflow-hidden" id="product-showcase" aria-label="Curated Dermal Solutions Catalog">

@@ -46,7 +46,7 @@ export default function Newsletter() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="font-serif text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-[#221F1D] leading-tight max-w-2xl mx-auto"
         >
-          Join the SÔL Circle<span className="text-brand-500">.</span>
+          Join the Boonava Circle<span className="text-brand-500">.</span>
         </motion.h2>
         
         <motion.p 
@@ -113,7 +113,7 @@ export default function Newsletter() {
                   <Check className="w-5 h-5" />
                 </div>
                 <h3 className="text-stone-900 text-sm font-semibold uppercase tracking-widest">
-                  Welcome to SÔL Circle
+                  Welcome to Boonava Circle
                 </h3>
                 <p className="text-stone-600 text-xs font-light mt-1.5">
                   Confirm your email in your inbox briefly. Your travel-size voucher is on its way!

@@ -11,12 +11,12 @@ export default function BrandInfo() {
     {
       icon: <Sun className="w-6 h-6 text-brand-600" />,
       title: 'Maximum Sun Protection',
-      description: 'Sunscreen Spf50 PA++++ guarantees broad-spectrum defense against UVA/UVB rays without leaving a white cast or sticky residue.'
+      description: 'Sunscreen SPF 50 PA++++ guarantees broad-spectrum defense against UVA/UVB rays without leaving a white cast or sticky residue.'
     },
     {
       icon: <ShieldCheck className="w-6 h-6 text-brand-600" />,
       title: 'Deep Hydration Repair',
-      description: 'The Moisturizer Cream locks in intense moisture for 24 hours, actively repairing your skin barrier and preventing flakiness.'
+      description: 'The Hydrating Moisturizer Cream locks in intense moisture for 24 hours, actively repairing your skin barrier and preventing flakiness.'
     },
     {
       icon: <Award className="w-6 h-6 text-brand-600" />,
