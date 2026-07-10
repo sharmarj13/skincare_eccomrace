@@ -121,7 +121,7 @@ export default function ProductCard({ product, onAddToCart, onClickCard }: Produ
           {product.description}
         </p>
 
-        {/* Footer Area: Price & CTA */}
+        {/* Footer Area: Price */}
         <div className="mt-5 pt-4 border-t border-stone-100 flex items-center justify-between w-full">
           <div>
             {hasDiscount ? (
@@ -133,25 +133,6 @@ export default function ProductCard({ product, onAddToCart, onClickCard }: Produ
               <span className="text-base font-bold text-stone-900">₹{product.price.toFixed(2)}</span>
             )}
           </div>
-
-          <button
-            onClick={handleAddClick}
-            disabled={product.stock <= 0}
-            className={`cursor-pointer rounded-full p-2.5 transition-all duration-300 flex items-center justify-center border focus:outline-none ${
-              product.stock <= 0
-                ? 'bg-stone-100 border-stone-200 text-stone-400 cursor-not-allowed'
-                : isSuccessAdded
-                ? 'bg-emerald-500 border-emerald-500 text-white hover:bg-emerald-600'
-                : 'bg-brand-50 border-brand-100 text-brand-600 hover:bg-brand-500 hover:text-white'
-            }`}
-            aria-label="Add this item to Shopping Bag"
-          >
-            {isSuccessAdded ? (
-              <span className="text-xs font-bold px-1.5 uppercase tracking-wider">Added!</span>
-            ) : (
-              <ShoppingBag className="w-4 h-4" />
-            )}
-          </button>
         </div>
       </div>
     </motion.div>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Star, ShieldCheck, Heart, Sparkles, Plus, Minus, ArrowLeft, RefreshCw, ShoppingBag } from 'lucide-react';
+import { Star, ShieldCheck, Heart, Sparkles, Plus, Minus, ArrowLeft, RefreshCw, ShoppingBag, MessageCircle } from 'lucide-react';
 import { Product } from '../../types';
 import ProductCard from './ProductCard';
 
@@ -52,6 +52,11 @@ export default function ProductDetailView({
     setTimeout(() => {
       setIsSuccessAdded(false);
     }, 1500);
+  };
+
+  const handleOrderWhatsApp = () => {
+    const text = encodeURIComponent(`Hello Boonava! I would like to order the product: ${product.name} (${product.size}) for ₹${(product.discountPrice ?? product.price).toFixed(2)}.`);
+    window.open(`https://wa.me/9024234466?text=${text}`, '_blank');
   };
 
   // Find complementary related products under same category, or select alternatives
@@ -232,46 +237,15 @@ export default function ProductDetailView({
               </div>
             </div>
 
-            {/* Cart Interactive Controller */}
-            <div className="flex flex-col sm:flex-row gap-4 items-stretch w-full pt-6 border-t border-stone-200/50">
-              
-              {/* Quantity selector */}
-              <div className="flex items-center justify-between border border-stone-200 rounded-full bg-white px-4 py-3 sm:w-36 shrink-0 shadow-sm">
-                <button
-                  onClick={handleDecrement}
-                  disabled={quantity <= 1}
-                  className="p-1 text-stone-500 hover:text-brand-500 cursor-pointer disabled:opacity-30 disabled:pointer-events-none"
-                  aria-label="Reduce quantity by 1"
-                >
-                  <Minus className="w-4 h-4" />
-                </button>
-                <span className="text-sm font-semibold text-stone-800">{quantity}</span>
-                <button
-                  onClick={handleIncrement}
-                  disabled={quantity >= product.stock}
-                  className="p-1 text-stone-500 hover:text-brand-500 cursor-pointer disabled:opacity-30 disabled:pointer-events-none"
-                  aria-label="Increase quantity by 1"
-                >
-                  <Plus className="w-4 h-4" />
-                </button>
-              </div>
-
-              {/* Main solid CTA add to cart */}
+            {/* WhatsApp Order Action */}
+            <div className="w-full pt-6 border-t border-stone-200/50">
               <button
-                onClick={handleAdd}
-                disabled={product.stock <= 0}
-                className={`flex-grow rounded-full py-4 px-8 text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer shadow-premium text-center flex items-center justify-center gap-2 focus:outline-none ${
-                  product.stock <= 0
-                    ? 'bg-stone-200 text-stone-400 cursor-not-allowed'
-                    : isSuccessAdded
-                    ? 'bg-emerald-500 text-white shadow-none'
-                    : 'bg-brand-500 hover:bg-brand-600 text-white'
-                }`}
+                onClick={handleOrderWhatsApp}
+                className="w-full rounded-full py-4 px-8 text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer shadow-premium text-center flex items-center justify-center gap-2.5 focus:outline-none bg-[#25D366] hover:bg-[#20bd5a] text-white"
               >
-                <ShoppingBag className="w-4.5 h-4.5" />
-                <span>{isSuccessAdded ? 'Successfully Added!' : 'Add to Shopping Bag'}</span>
+                <MessageCircle className="w-5 h-5 fill-current" />
+                <span>Order via WhatsApp</span>
               </button>
-
             </div>
 
             {/* Quick trust assurances badge list */}

@@ -87,7 +87,7 @@ export default function Header({
             </button>
 
             {/* Desktop Navigation Link Menu */}
-            <nav className="hidden md:flex items-center gap-8 lg:gap-10">
+            <nav className="hidden md:flex items-center gap-8 lg:gap-10 ml-auto">
               {navItems.map((item) => {
                 const isActive = activePage === item.id || (item.id === 'products' && activePage.startsWith('product'));
                 return (
@@ -108,29 +108,6 @@ export default function Header({
                 );
               })}
             </nav>
-
-            {/* Action Buttons: Search & Bag */}
-            <div className="flex items-center gap-2 sm:gap-4">
-              <button
-                onClick={onOpenCart}
-                className="relative p-2.5 rounded-full hover:bg-stone-100 transition-colors duration-300 cursor-pointer focus:outline-none group"
-                aria-label="Open Shopping Bag"
-              >
-                <ShoppingBag className="w-5.5 h-5.5 text-stone-800 group-hover:text-brand-500 transition-colors pr-0.5" />
-                <AnimatePresence>
-                  {cartCount > 0 && (
-                    <motion.span
-                      initial={{ scale: 0.7, opacity: 0 }}
-                      animate={{ scale: 1, opacity: 1 }}
-                      exit={{ scale: 0.7, opacity: 0 }}
-                      className="absolute -top-0.5 -right-0.5 w-5 h-5 bg-brand-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center shadow-sm"
-                    >
-                      {cartCount}
-                    </motion.span>
-                  )}
-                </AnimatePresence>
-              </button>
-            </div>
           </div>
         </div>
       </header>
