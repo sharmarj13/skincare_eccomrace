@@ -160,7 +160,7 @@ export default function Header({
                 </p>
                 <div className="mt-4 flex flex-col gap-1 text-[11px] font-medium tracking-wide text-stone-700">
                   <span>Inquiries: boonavacare@gmail.com</span>
-                  <span>WhatsApp: +91 9024234466</span>
+                  <span>WhatsApp: +91 7892186971</span>
                 </div>
               </div>
             </motion.div>

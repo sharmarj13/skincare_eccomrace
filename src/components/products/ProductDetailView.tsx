@@ -56,7 +56,7 @@ export default function ProductDetailView({
 
   const handleOrderWhatsApp = () => {
     const text = encodeURIComponent(`Hello Boonava! I would like to order the product: ${product.name} (${product.size}) for ₹${(product.discountPrice ?? product.price).toFixed(2)}.`);
-    window.open(`https://wa.me/9024234466?text=${text}`, '_blank');
+    window.open(`https://wa.me/7892186971?text=${text}`, '_blank');
   };
 
   // Find complementary related products under same category, or select alternatives
