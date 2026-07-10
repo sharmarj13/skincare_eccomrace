@@ -89,7 +89,7 @@ export default function ContactView() {
                 <div>
                   <h3 className="text-xs uppercase tracking-widest font-bold text-stone-800 mb-1">Skincare Support Line</h3>
                   <span className="text-stone-500 text-xs font-light">
-                    +91 9024234466
+                    +91 7892186971
                   </span>
                 </div>
               </div>

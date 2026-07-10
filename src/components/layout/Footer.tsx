@@ -127,7 +127,7 @@ export default function Footer({ onChangePage }: FooterProps) {
               <div className="flex items-start gap-3">
                 <Phone className="w-4 h-4 text-brand-400 shrink-0 mt-0.5" />
                 <span className="text-sm text-stone-200 font-light">
-                  +91 9024234466
+                  +91 7892186971
                 </span>
               </div>
 
