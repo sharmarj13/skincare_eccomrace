@@ -14,7 +14,7 @@ export default function ContactView() {
   const [isSent, setIsSent] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) {
       alert('Please fill out all required fields.');
@@ -22,12 +22,40 @@ export default function ContactView() {
     }
 
     setLoading(true);
-    setTimeout(() => {
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "64458f73-abc0-49ef-a496-60bfe2286ae7",
+          subject: `New Contact Form Inquiry: ${formData.subject.toUpperCase()}`,
+          from_name: "Boonava Care Contact Form",
+          name: formData.name,
+          email: formData.email,
+          topic: formData.subject,
+          message: formData.message,
+        }),
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        setIsSent(true);
+        setFormData({ name: '', email: '', subject: 'consultation', message: '' });
+      } else {
+        alert(result.message || 'Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      console.error(error);
+      alert('Failed to send message. Please try again later.');
+    } finally {
       setLoading(false);
-      setIsSent(true);
-      setFormData({ name: '', email: '', subject: 'consultation', message: '' });
-    }, 1200);
+    }
   };
+
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;

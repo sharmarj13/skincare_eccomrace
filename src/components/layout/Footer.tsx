@@ -21,7 +21,7 @@ export default function Footer({ onChangePage }: FooterProps) {
   const policyLinks = [
     { label: 'Privacy Policy', id: 'privacy-policy' },
     { label: 'Terms and Conditions', id: 'terms-condition' },
-    { label: 'Refund Policy', id: 'return-policy' },
+    // { label: 'Refund Policy', id: 'return-policy' },
   ];
 
   return (

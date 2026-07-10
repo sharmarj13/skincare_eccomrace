@@ -9,6 +9,7 @@ interface OfferModalProps {
 
 export default function OfferModal({ isOpen, onClose }: OfferModalProps) {
   const [view, setView] = useState<'selection' | 'form' | 'success'>('selection');
+  const [loading, setLoading] = useState(false);
 
   // Form State
   const [formData, setFormData] = useState({
@@ -33,17 +34,48 @@ export default function OfferModal({ isOpen, onClose }: OfferModalProps) {
     onClose();
   };
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate API call for form submission
-    console.log('Order Inquiry Submitted:', formData);
-    setView('success');
-    
-    // Auto close after 3.5 seconds
-    setTimeout(() => {
-      onClose();
-    }, 3500);
+    setLoading(true);
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "64458f73-abc0-49ef-a496-60bfe2286ae7",
+          subject: "Express Order Request: Buy 2 Get 1 Free",
+          from_name: "Boonava Care Offer Modal",
+          name: formData.name,
+          mobile: formData.mobile,
+          address: formData.address,
+          city: formData.city,
+          state: formData.state,
+          pincode: formData.pincode,
+        }),
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        setView('success');
+        // Auto close after 3.5 seconds
+        setTimeout(() => {
+          onClose();
+        }, 3500);
+      } else {
+        alert(result.message || 'Something went wrong. Please try again.');
+      }
+    } catch (err) {
+      console.error(err);
+      alert('Failed to submit order request. Please try again later.');
+    } finally {
+      setLoading(false);
+    }
   };
+
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -187,11 +219,11 @@ export default function OfferModal({ isOpen, onClose }: OfferModalProps) {
                     </div>
 
                     <div className="mt-auto pt-4 flex gap-3">
-                      <button type="button" onClick={() => setView('selection')} className="px-5 py-3 rounded-xl border border-stone-200 text-stone-600 text-xs font-bold uppercase tracking-wider hover:bg-stone-100 transition-colors cursor-pointer">
+                      <button type="button" disabled={loading} onClick={() => setView('selection')} className="px-5 py-3 rounded-xl border border-stone-200 text-stone-600 text-xs font-bold uppercase tracking-wider hover:bg-stone-100 transition-colors cursor-pointer disabled:opacity-50">
                         Back
                       </button>
-                      <button type="submit" className="flex-1 bg-brand-500 hover:bg-brand-600 text-white py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors shadow-sm cursor-pointer">
-                        Submit Order Inquiry
+                      <button type="submit" disabled={loading} className="flex-1 bg-brand-500 hover:bg-brand-600 text-white py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors shadow-sm cursor-pointer disabled:opacity-60">
+                        {loading ? 'Submitting Inquiry...' : 'Submit Order Inquiry'}
                       </button>
                     </div>
                   </form>

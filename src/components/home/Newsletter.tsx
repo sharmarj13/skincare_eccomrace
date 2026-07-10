@@ -7,8 +7,9 @@ export default function Newsletter() {
   const [email, setEmail] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
 
-  const handleSubscribe = (e: React.FormEvent) => {
+  const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email || !email.includes('@')) {
       setError('Please provide a valid exquisite email address.');
@@ -16,9 +17,38 @@ export default function Newsletter() {
     }
     
     setError('');
-    setIsSubmitted(true);
-    setEmail('');
+    setLoading(true);
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "64458f73-abc0-49ef-a496-60bfe2286ae7",
+          subject: "New Newsletter Subscription",
+          from_name: "Boonava Care Newsletter",
+          email: email,
+        }),
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        setIsSubmitted(true);
+        setEmail('');
+      } else {
+        setError(result.message || 'Something went wrong. Please try again.');
+      }
+    } catch (err) {
+      console.error(err);
+      setError('Failed to subscribe. Please try again later.');
+    } finally {
+      setLoading(false);
+    }
   };
+
 
   return (
     <section className="py-20 sm:py-24 bg-[#E8E2DA]/40 relative overflow-hidden" id="newsletter">
@@ -85,11 +115,12 @@ export default function Newsletter() {
                     type="email"
                     placeholder="Enter your email address"
                     value={email}
+                    disabled={loading}
                     onChange={(e) => {
                       setEmail(e.target.value);
                       if (error) setError('');
                     }}
-                    className="w-full pl-11 pr-5 py-3.5 sm:py-4 bg-white border border-stone-200 focus:border-brand-400 rounded-full text-sm font-light text-[#221F1D] focus:outline-none transition-all duration-300 shadow-sm"
+                    className="w-full pl-11 pr-5 py-3.5 sm:py-4 bg-white border border-stone-200 focus:border-brand-400 rounded-full text-sm font-light text-[#221F1D] focus:outline-none transition-all duration-300 shadow-sm disabled:opacity-60"
                     aria-label="Email address for newsletters"
                   />
                 </div>
@@ -98,8 +129,9 @@ export default function Newsletter() {
                   type="submit"
                   variant="primary"
                   className="shrink-0"
+                  disabled={loading}
                 >
-                  Join Circle
+                  {loading ? 'Joining...' : 'Join Circle'}
                 </CustomButton>
               </motion.form>
             ) : (

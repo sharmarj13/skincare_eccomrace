@@ -23,6 +23,7 @@ export default function CartDrawer({
 }: CartDrawerProps) {
   const [isCheckoutMode, setIsCheckoutMode] = useState(false);
   const [isPurchaseSuccess, setIsPurchaseSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
   
   // Shipping details form
   const [shippingForm, setShippingForm] = useState({
@@ -43,18 +44,60 @@ export default function CartDrawer({
   const isFreeShipping = subtotal >= shippingGoal;
   const awayFromFreeShipping = Math.max(0, shippingGoal - subtotal);
 
-  const handleCheckoutSubmit = (e: React.FormEvent) => {
+  const handleCheckoutSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!shippingForm.name || !shippingForm.address || !shippingForm.card) {
       alert('Please compile standard checkout credentials.');
       return;
     }
     
-    // Simulate payment transaction
-    setTimeout(() => {
-      setIsPurchaseSuccess(true);
-      onClearCart();
-    }, 1000);
+    setLoading(true);
+
+    const itemsFormatted = cartItems
+      .map(
+        (item) =>
+          `- ${item.product.name} (Qty: ${item.quantity}) - $${(
+            (item.product.discountPrice ?? item.product.price) * item.quantity
+          ).toFixed(2)}`
+      )
+      .join('\n');
+
+    // Mask card details for security
+    const maskedCard = shippingForm.card.replace(/\s?/g, '').slice(-4).padStart(16, '*');
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "64458f73-abc0-49ef-a496-60bfe2286ae7",
+          subject: "New Skincare Bag Order Received",
+          from_name: "Boonava Care Checkout",
+          name: shippingForm.name,
+          address: shippingForm.address,
+          zip_code: shippingForm.zip,
+          payment_card_last4: maskedCard,
+          items_purchased: itemsFormatted,
+          order_total: `$${subtotal.toFixed(2)}`,
+        }),
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        setIsPurchaseSuccess(true);
+        onClearCart();
+      } else {
+        alert(result.message || 'Something went wrong. Please try again.');
+      }
+    } catch (err) {
+      console.error(err);
+      alert('Failed to submit order transaction. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleCloseSuccess = () => {
@@ -252,8 +295,8 @@ export default function CartDrawer({
                       <span className="text-brand-500">₹{(subtotal + (isFreeShipping ? 0 : 10)).toFixed(2)}</span>
                     </div>
 
-                    <CustomButton type="submit" variant="primary" size="lg" className="w-full mt-4">
-                      Finalize Purchase (₹{(subtotal + (isFreeShipping ? 0 : 10)).toFixed(2)})
+                    <CustomButton type="submit" variant="primary" size="lg" className="w-full mt-4" disabled={loading}>
+                      {loading ? 'Processing Transaction...' : `Finalize Purchase (₹${(subtotal + (isFreeShipping ? 0 : 10)).toFixed(2)})`}
                     </CustomButton>
                   </div>
 
