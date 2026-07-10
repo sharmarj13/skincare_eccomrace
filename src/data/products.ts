@@ -7,7 +7,7 @@ export const products: Product[] = [
     name: 'Vitamin C Face Wash',
     category: 'face',
     price: 349.00,
-    discountPrice: 349.00,
+    discountPrice: 229.00,
     description: 'A deeply refreshing Vitamin C Face Wash that gently cleanses impurities while giving your skin a radiant, natural glow every morning.',
     longDescription: 'Our best-selling Vitamin C Face Wash is your daily secret to glowing, refreshed skin. Formulated to tackle dullness and even out your skin tone, this gentle yet effective cleanser washes away dirt, excess oil, and impurities without stripping your skin\'s natural moisture. Packed with powerful antioxidants, it revitalizes tired skin and leaves you looking bright and energized.',
     benefits: [
@@ -58,6 +58,7 @@ export const products: Product[] = [
     name: 'Vitamin C Face Serum',
     category: 'face',
     price: 699.00,
+    discountPrice: 399.00,
     description: 'A fast-absorbing, high-potency Vitamin C Face Serum designed to reduce pigmentation, boost collagen, and give you flawless, youthful skin.',
     longDescription: 'Say goodbye to dark spots and uneven texture with our advanced Vitamin C Face Serum. This lightweight formula penetrates deeply to repair skin damage and stimulate collagen production. Perfect for achieving a glass-skin look, it acts as a powerful anti-aging barrier while keeping your skin visibly plump, hydrated, and radiant.',
     benefits: [
@@ -104,6 +105,7 @@ export const products: Product[] = [
     name: 'Hydrating Moisturizer Cream',
     category: 'face',
     price: 449.00,
+    discountPrice: 299.00,
     description: 'A deeply nourishing Moisturizer Cream that locks in hydration for 24 hours, leaving your skin feeling silky smooth without any greasy residue.',
     longDescription: 'Our signature Moisturizer Cream is the ultimate hydration solution for all skin types. It melts seamlessly into the skin, repairing your natural moisture barrier and keeping flakiness at bay. Whether it\'s harsh winters or dry summers, this cream ensures your face stays cashmere-soft, plump, and healthy all day long.',
     benefits: [
@@ -148,6 +150,7 @@ export const products: Product[] = [
     name: 'Lemon Body Wash',
     category: 'body',
     price: 349.00,
+    discountPrice: 199.00,
     description: 'A refreshing and zesty Lemon Body Wash that awakens your senses, deeply cleanses, and leaves your skin feeling incredibly soft and energized.',
     longDescription: 'Turn your daily shower into a revitalizing spa experience with our Lemon Body Wash. Bursting with real citrus extracts, it effortlessly washes away sweat, grime, and fatigue. The rich, hydrating lather ensures your skin never feels tight or dry, while the uplifting lemon aroma keeps you feeling fresh and confident all day.',
     benefits: [
@@ -196,7 +199,7 @@ export const products: Product[] = [
     name: 'Sunscreen SPF 50 PA++++',
     category: 'face',
     price: 499.00,
-    discountPrice: 499.00,
+    discountPrice: 249.00,
     description: 'A broad-spectrum Sunscreen SPF 50 PA++++ that provides maximum protection against UVA and UVB rays without leaving a white cast or greasy feel.',
     longDescription: 'Never step out without our ultimate Sunscreen SPF 50 PA++++. Specially formulated to offer heavy-duty protection against sun damage, premature aging, and tanning. It features an ultra-light, non-sticky formula that blends seamlessly into all skin tones, leaving zero white cast. Perfect for everyday wear, even under makeup.',
     benefits: [
